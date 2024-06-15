@@ -5,14 +5,46 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="1" author="WINLINAUNG">
-        <createTable tableName="users">
-            <column name="id" type="SERIAL">
+    <changeSet id="16_08_2024_CREATE_ALL_TABLES" author="WINLINAUNG" >
+        <createTable tableName="market">
+            <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
             </column>
             <column name="name" type="VARCHAR(100)"/>
-            <column name="email" type="VARCHAR(100)"/>
+            <column name="description" type="longtext"/>
+            <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
+            <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
         </createTable>
+          <createTable tableName="location">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="state" type="VARCHAR(255)"/>
+            <column name="district" type="VARCHAR(255)"/>
+            <column name="subdistrict" type="VARCHAR(255)"/>
+            <column name="city" type="VARCHAR(255)"/>
+            <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
+            <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
+        </createTable>
+         <createTable tableName="item">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="name" type="VARCHAR(100)"/>
+            <column name="market_id" type="varchar(255)"/>
+            <column name="location_id" type="varchar(255)"/>
+            <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
+            <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
+        </createTable>
+         <createIndex indexName="item_name" tableName="item">
+            <column name="name"/>
+        </createIndex>
+        <addForeignKeyConstraint baseTableName="item" baseColumnNames="market_id"
+        constraintName="market_item_fk" referencedTableName="market"
+        referencedColumnNames="id" onDelete="CASCADE" />
+         <addForeignKeyConstraint baseTableName="item" baseColumnNames="location_id"
+        constraintName="location_item_fk" referencedTableName="location"
+        referencedColumnNames="id" onDelete="CASCADE" />
     </changeSet>
 
 </databaseChangeLog>
