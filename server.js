@@ -2,7 +2,6 @@ const express = require( 'express' );
 const liquibase = require( './api/util/liquibase' )
 const dbConnection = require( './api/util/db_connection' )
 const marketRoute = require( './api/route/market_route' );
-const { v4: uuidv4 } = require( 'uuid' );
 const app = express();
 const port = 7000;
 
