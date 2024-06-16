@@ -1,12 +1,13 @@
 const { Client, Pool } = require( 'pg' );
+const database = require( './database' )
 const databaseName = 'merchandiseprice';
-const databasePool = new Pool( {
-    user: 'postgres',
-    host: 'localhost',
-    database: databaseName,
-    password: 'root',
-    port: 5432,
-} );
+// const databasePool = new Pool( {
+//     user: 'postgres',
+//     host: 'localhost',
+//     database: databaseName,
+//     password: 'root',
+//     port: 5432,
+// } );
 
 const newDatabaseClient = new Client( {
     user: 'postgres',
@@ -43,9 +44,9 @@ const createDatabase = async () =>
     } finally
     {
         await newDatabaseClient.end();
-        await databasePool.connect();
+        await database.connectDB();
         // Close the databaseClient connection
         // await databaseClient.end();
     }
 };
-module.exports = { createDatabase, databasePool }
+module.exports = { createDatabase }
