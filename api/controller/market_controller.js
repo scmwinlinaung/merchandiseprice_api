@@ -1,4 +1,5 @@
-const { raw } = require( 'express' );
+
+const { QueryTypes } = require( 'sequelize' );
 const Market = require( '../model/market' );
 const { v4: uuidv4 } = require( 'uuid' );
 exports.createMarket = async ( req, res, next ) =>
@@ -46,3 +47,45 @@ exports.listAllMarket = async ( req, res, next ) =>
     const result = await Market.findAll();
     return res.status( 200 ).json( result )
 }
+
+exports.updateMarket = async ( req, res, next ) =>
+{
+    try
+    {
+        const { id, name, description } = req.body;
+        const market = {
+            id: id,
+            name: name,
+            description: description,
+            // created_datetime: new Date(),
+            modified_datetime: new Date(),
+        }
+        const result = await Market.update( market, {
+            where: {
+                id: id
+            }
+        } );
+        res.status( 200 ).json( {
+            "status": "Success"
+        } );
+    }
+    catch ( err )
+    {
+        res.status( 500 ).json( { error: err.message } );
+    }
+}
+
+exports.deleteMarket = async ( req, res, next ) =>
+{
+    try
+    {
+        await Market.sequelize.query( `delete from market where id = '${ req.params.marketId }'`, { type: QueryTypes.DELETE } )
+        res.status( 200 ).json( {
+            "status": "Success"
+        } )
+    }
+    catch ( err )
+    {
+        res.status( 500 ).json( { error: err.message } );
+    }
+} 

@@ -6,6 +6,9 @@
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
     <changeSet id="16_08_2024_CREATE_ALL_TABLES" author="WINLINAUNG" >
+      <sql>
+            CREATE TYPE status AS ENUM ('UP', 'DOWN');
+        </sql>
         <createTable tableName="market">
             <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
@@ -32,6 +35,12 @@
             </column>
             <column name="name" type="VARCHAR(100)"/>
             <column name="market_id" type="varchar(255)"/>
+            <column name="buy_price" type="double"/>
+            <column name="sell_price" type="double"/>
+            <column name="buy_price_changes" type="double"/>
+            <column name="sell_price_changes" type="double"/>
+            <column name="unit" type="VARCHAR(100)"/>
+            <column name="status" type="status"/>
             <column name="location_id" type="varchar(255)"/>
             <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
             <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
