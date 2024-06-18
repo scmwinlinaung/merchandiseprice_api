@@ -9,7 +9,7 @@ router.route( '/item/:itemId' )
     .get( itemController.getOneItem )
 router.route( '/item/:itemId' )
     .post( itemController.deleteItem )
-router.route( '/summaryOfLatestItem' )
-    .get( itemController.summaryOfLatestItem )
+router.route( '/summaryOfAllLatestItem' )
+    .get( itemController.summaryOfAllLatestItem )
 
 module.exports = router;
