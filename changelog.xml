@@ -8,6 +8,7 @@
     <changeSet id="16_08_2024_CREATE_ALL_TABLES" author="WINLINAUNG" >
       <sql>
             CREATE TYPE status AS ENUM ('UP', 'DOWN');
+            CREATE TYPE item_name AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY','WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP');
         </sql>
         <createTable tableName="market">
             <column name="id" type="varchar(255)">
@@ -33,7 +34,7 @@
             <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="name" type="VARCHAR(100)"/>
+            <column name="name" type="item_name"/>
             <column name="market_id" type="varchar(255)"/>
             <column name="buy_price" type="double"/>
             <column name="sell_price" type="double"/>

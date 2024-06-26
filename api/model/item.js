@@ -7,8 +7,8 @@ const Item = database.sequelize.define( 'Item', {
         primaryKey: true
     },
     name: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.ENUM,
+        values: [ 'USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP' ],
     },
     market_id: {
         type: DataTypes.STRING,
