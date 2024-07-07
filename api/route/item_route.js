@@ -11,5 +11,6 @@ router.route( '/item/:itemId' )
     .post( itemController.deleteItem )
 router.route( '/summaryOfAllLatestItem' )
     .get( itemController.summaryOfAllLatestItem )
-
+router.route( '/item_name' )
+    .get( itemController.listOfItemName )
 module.exports = router;

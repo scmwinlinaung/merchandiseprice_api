@@ -1,6 +1,20 @@
 const { QueryTypes } = require( 'sequelize' );
 const Item = require( '../model/item' );
 const { v4: uuidv4 } = require( 'uuid' );
+exports.listOfItemName = async ( req, res, next ) =>
+{
+    try
+    {
+        const items = await Item.sequelize.query( "select distinct name from item order by name desc;", {
+            type: QueryTypes.SELECT
+        } );
+
+        res.status( 201 ).json( items );
+    } catch ( err )
+    {
+        res.status( 500 ).json( { error: err.message } );
+    }
+}
 exports.createItem = async ( req, res, next ) =>
 {
 
