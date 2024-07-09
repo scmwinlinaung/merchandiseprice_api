@@ -1,4 +1,4 @@
-const { DataTypes } = require( 'sequelize' );
+const { DataTypes, Sequelize } = require( 'sequelize' );
 const database = require( '../util/database' );
 
 const Market = database.sequelize.define( 'Market', {
@@ -17,11 +17,13 @@ const Market = database.sequelize.define( 'Market', {
     created_datetime: {
         type: DataTypes.DATE,
         allowNull: false,
+        defaultValue: Sequelize.NOW,
 
     },
     modified_datetime: {
         type: DataTypes.DATE,
         allowNull: true,
+        defaultValue: Sequelize.NOW,
     }
 }, {
     timestamps: false,

@@ -32,8 +32,6 @@ exports.createItem = async ( req, res, next ) =>
             sell_price_changes: sell_price_changes,
             unit: unit,
             status: status,
-            created_datetime: new Date(),
-            modified_datetime: new Date(),
         }
         const result = await Item.create( item );
         res.status( 201 ).json( result );

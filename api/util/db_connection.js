@@ -44,7 +44,7 @@ const createDatabase = async () =>
     } finally
     {
         await newDatabaseClient.end();
-        await database.connectDB();
+        // await database.connectDB();
         // Close the databaseClient connection
         // await databaseClient.end();
     }

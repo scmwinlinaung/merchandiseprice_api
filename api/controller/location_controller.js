@@ -11,8 +11,6 @@ exports.createLocation = async ( req, res, next ) =>
             district: district,
             subdistrict: subdistrict,
             city: city,
-            created_datetime: new Date(),
-            modified_datetime: new Date(),
         }
         const result = await Location.create( location );
         res.status( 201 ).json( result );

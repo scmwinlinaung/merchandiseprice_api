@@ -1,4 +1,4 @@
-const { DataTypes } = require( 'sequelize' );
+const { DataTypes, Sequelize } = require( 'sequelize' );
 const database = require( '../util/database' );
 const Item = database.sequelize.define( 'Item', {
     id: {
@@ -46,11 +46,13 @@ const Item = database.sequelize.define( 'Item', {
     created_datetime: {
         type: DataTypes.DATE,
         allowNull: false,
+        defaultValue: Sequelize.NOW,
 
     },
     modified_datetime: {
         type: DataTypes.DATE,
         allowNull: true,
+        defaultValue: Sequelize.NOW,
     }
 }, {
     timestamps: false,

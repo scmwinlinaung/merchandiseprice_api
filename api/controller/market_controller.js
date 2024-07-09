@@ -12,8 +12,6 @@ exports.createMarket = async ( req, res, next ) =>
             id: uuidv4(),
             name: name,
             description: description,
-            created_datetime: new Date(),
-            modified_datetime: new Date(),
         }
         const result = await Market.create( market )
         res.status( 201 ).json( result );

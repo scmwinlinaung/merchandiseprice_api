@@ -15,19 +15,19 @@ const liquibaseConfig = {
 // Initialize Liquibase instance
 const liquibase = new Liquibase( liquibaseConfig );
 
-const updateLiquibase = () =>
+const updateLiquibase = async () =>
 {
-    // Run the update command
-    liquibase
-        .run( 'update' )
-        .then( () =>
-        {
-            console.log( 'Liquibase update executed successfully.' );
-        } )
-        .catch( ( err ) =>
-        {
-            console.error( 'Error executing Liquibase update:', err );
-        } );
+    try
+    {
+        // Run the update command
+        await liquibase
+            .run( 'update' )
+        console.log( 'Liquibase update executed successfully.' );
+    } catch ( err )
+    {
+        console.error( 'Error executing Liquibase update:', err );
+    }
+
 }
 
 module.exports = { updateLiquibase }

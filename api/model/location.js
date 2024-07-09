@@ -1,4 +1,4 @@
-const { DataTypes } = require( 'sequelize' );
+const { DataTypes, Sequelize } = require( 'sequelize' );
 const database = require( '../util/database' );
 
 const Location = database.sequelize.define( 'Location', {
@@ -26,11 +26,13 @@ const Location = database.sequelize.define( 'Location', {
     created_datetime: {
         type: DataTypes.DATE,
         allowNull: false,
+        defaultValue: Sequelize.NOW,
 
     },
     modified_datetime: {
         type: DataTypes.DATE,
         allowNull: true,
+        defaultValue: Sequelize.NOW,
     }
 }, {
     timestamps: false,
