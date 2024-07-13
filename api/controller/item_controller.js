@@ -136,42 +136,32 @@ exports.summaryOfAllLatestItem = async ( req, res, next ) =>
     }
 }
 
-exports.listOfEachItemWithPagination = async ( req, res, next ) =>
+exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
 {
-    const { startDate, endDate } = req.body;
-    const startOfDay = new Date( startDate.setHours( 0, 0, 0, 0 ) );
-    const endOfDay = new Date( endDate.setHours( 23, 59, 59, 999 ) );
-    console.log( startOfDay );
-    console.log( endOfDay );
-
-    const query = `
-        SELECT 
-            DATE(created_datetime) AS day,
-            ARRAY_AGG(id) AS ids,
-            ARRAY_AGG(name) AS names,
-            ARRAY_AGG(market_id) AS market_ids,
-            ARRAY_AGG(location_id) AS location_ids,
-            ARRAY_AGG(buy_price) AS buy_prices,
-            ARRAY_AGG(sell_price) AS sell_prices,
-            ARRAY_AGG(buy_price_changes) AS buy_price_changes,
-            ARRAY_AGG(sell_price_changes) AS sell_price_changes,
-            ARRAY_AGG(unit) AS units,
-            ARRAY_AGG(status) AS statuses
-        FROM item
-        WHERE created_datetime BETWEEN :startOfDay AND :endOfDay
-        GROUP BY DATE(created_datetime)
-        ORDER BY DATE(created_datetime);
+    const query = `SELECT item.name, item.unit, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status
+            FROM item
+            JOIN (
+                SELECT itemPrice.item_id, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status
+                FROM item_price itemPrice
+                WHERE itemPrice.created_datetime = (
+                    SELECT MAX(innerItemPrice.created_datetime)
+                    FROM item_price innerItemPrice
+                    WHERE innerItemPrice.item_id = itemPrice.item_id
+                    limit 1
+                )
+            ) itemPrice ON itemPrice.item_id = item.id
+    ;
     `;
-
     try
     {
-        const [ results, metadata ] = await Item.sequelize.query( query, {
-            replacements: { startOfDay, endOfDay },
-            type: sequelize.QueryTypes.SELECT
+        const result = await Item.sequelize.query( query, {
+            type: QueryTypes.SELECT
         } );
-        return results;
+        res.status( 200 ).json( result );
     } catch ( error )
     {
-        console.error( 'Error fetching items grouped by day:', error );
+        console.error( 'Error : ', error );
     }
 }
+
+
