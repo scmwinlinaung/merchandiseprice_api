@@ -20,18 +20,12 @@ exports.createItem = async ( req, res, next ) =>
 
     try
     {
-        const { name, market_id, location_id, buy_price, sell_price, buy_price_changes, sell_price_changes, unit, status } = req.body;
+        const { name, marketId, unit } = req.body;
         const item = {
             id: uuidv4(),
             name: name,
-            market_id: market_id,
-            location_id: location_id,
-            buy_price: buy_price,
-            sell_price: sell_price,
-            buy_price_changes: buy_price_changes,
-            sell_price_changes: sell_price_changes,
+            marketId: marketId,
             unit: unit,
-            status: status,
         }
         const result = await Item.create( item );
         res.status( 201 ).json( result );
@@ -45,19 +39,13 @@ exports.updateItem = async ( req, res, next ) =>
 {
     try
     {
-        const { id, name, market_id, location_id, buy_price, sell_price, buy_price_changes, sell_price_changes, unit, status } = req.body;
+        const { id, name, marketId, unit } = req.body;
         const item = {
             id: id,
             name: name,
-            market_id: market_id,
-            location_id: location_id,
-            buy_price: buy_price,
-            sell_price: sell_price,
-            buy_price_changes: buy_price_changes,
-            sell_price_changes: sell_price_changes,
+            marketId: marketId,
             unit: unit,
-            status: status,
-            modified_datetime: new Date(),
+            modifiedDatetime: new Date(),
         }
         const result = await Item.update( item, {
             where: {
@@ -116,27 +104,28 @@ exports.summaryOfAllLatestItem = async ( req, res, next ) =>
         // 2024-06-17 00:00:00 (start date) 
         // 2024-06-18 23:59:59
         const { name, locationId, startDate, endDate } = req.body;
-        const result = await Item.sequelize.query( `SELECT DISTINCT ON (Item1.name, TO_CHAR(Item1.created_datetime, 'DD-MM-YYYY'))
-            Item1.name,
-            Item1.unit,
-            TO_CHAR(Item1.created_datetime, 'DD-MM-YYYY') AS date,
+        const result = await Item.sequelize.query( `SELECT DISTINCT ON (Item.name, TO_CHAR(Item.created_datetime, 'DD-MM-YYYY'))
+            Item.name,
+            Item.unit,
+            TO_CHAR(Item.created_datetime, 'DD-MM-YYYY') AS date,
             (
                 SELECT json_agg(json_build_object(
-                    'buy_price', Item2.buy_price,
-                    'sell_price', Item2.sell_price,
-                    'buy_price_changes', Item2.buy_price_changes,
-                    'sell_price_changes', Item2.sell_price_changes,
-                    'status', Item2.status,
-                    'time',TO_CHAR(Item2.created_datetime, 'HH24:MI:SS')
+                    'buy_price', ItemPrice.buy_price,
+                    'sell_price', ItemPrice.sell_price,
+                    'buy_price_changes', ItemPrice.buy_price_changes,
+                    'sell_price_changes', ItemPrice.sell_price_changes,
+                    'status', ItemPrice.status,
+                    'time',TO_CHAR(ItemPrice.created_datetime, 'HH24:MI:SS')
                 ))
-                FROM item Item2
-                WHERE Item2.name = Item1.name
-                AND TO_CHAR(Item2.created_datetime, 'DD-MM-YYYY') = TO_CHAR(Item1.created_datetime, 'DD-MM-YYYY')
+                FROM item_price ItemPrice
+                WHERE ItemPrice.item_id = Item.id
+                AND ItemPrice.location_id = '${ locationId.trim() }'
+                and ItemPrice.created_datetime BETWEEN '${ startDate }' AND '${ endDate }'
             ) AS item_list
-            FROM item Item1
-            WHERE Item1.name = '${ name.trim() }' and Item1.created_datetime BETWEEN '${ startDate }' AND '${ endDate }'
-            AND Item1.location_id = '${ locationId.trim() }'
-            ORDER BY Item1.name,TO_CHAR(Item1.created_datetime, 'DD-MM-YYYY') DESC;
+            FROM item Item
+            WHERE Item.name = '${ name.trim() }'
+             
+            ORDER BY Item.name,TO_CHAR(Item.created_datetime, 'DD-MM-YYYY') DESC;
 `, {
             type: QueryTypes.SELECT
         } )

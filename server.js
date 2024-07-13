@@ -4,6 +4,7 @@ const dbConnection = require( './api/util/db_connection' )
 const marketRoute = require( './api/route/market_route' );
 const locationRoute = require( './api/route/location_route' );
 const itemRoute = require( './api/route/item_route' );
+const itemPriceRoute = require( './api/route/item_price_route' );
 const Market = require( './api/model/market' )
 const app = express();
 const port = 7000;
@@ -55,6 +56,7 @@ async function main ()
     app.use( '/api/v1', marketRoute );
     app.use( '/api/v1/', locationRoute );
     app.use( '/api/v1/', itemRoute );
+    app.use( '/api/v1/', itemPriceRoute );
     // Start the server
     app.listen( port, () =>
     {

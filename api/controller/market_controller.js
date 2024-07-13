@@ -56,7 +56,7 @@ exports.updateMarket = async ( req, res, next ) =>
             name: name,
             description: description,
             // created_datetime: new Date(),
-            modified_datetime: new Date(),
+            modifiedDatetime: new Date(),
         }
         const result = await Market.update( market, {
             where: {

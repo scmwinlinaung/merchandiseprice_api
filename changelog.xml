@@ -7,7 +7,7 @@
 
     <changeSet id="16_08_2024_CREATE_ALL_TABLES" author="WINLINAUNG" >
       <sql>
-            CREATE TYPE status AS ENUM ('UP', 'DOWN');
+            CREATE TYPE status AS ENUM ('UP', 'DOWN', 'UNCHANGE');
             CREATE TYPE item_name AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY','WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP');
         </sql>
         <createTable tableName="market">
@@ -36,13 +36,7 @@
             </column>
             <column name="name" type="item_name"/>
             <column name="market_id" type="varchar(255)"/>
-            <column name="buy_price" type="double"/>
-            <column name="sell_price" type="double"/>
-            <column name="buy_price_changes" type="double"/>
-            <column name="sell_price_changes" type="double"/>
             <column name="unit" type="VARCHAR(100)"/>
-            <column name="status" type="status"/>
-            <column name="location_id" type="varchar(255)"/>
             <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
             <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
         </createTable>
@@ -52,8 +46,25 @@
         <addForeignKeyConstraint baseTableName="item" baseColumnNames="market_id"
         constraintName="market_item_fk" referencedTableName="market"
         referencedColumnNames="id" onDelete="CASCADE" />
-         <addForeignKeyConstraint baseTableName="item" baseColumnNames="location_id"
-        constraintName="location_item_fk" referencedTableName="location"
+        <createTable tableName="item_price">
+            <column name="id" type="varchar(255)">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="item_id" type="varchar(255)"/>
+            <column name="buy_price" type="double"/>
+            <column name="sell_price" type="double"/>
+            <column name="buy_price_changes" type="double"/>
+            <column name="sell_price_changes" type="double"/>
+            <column name="status" type="status"/>
+            <column name="location_id" type="varchar(255)"/>
+            <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
+            <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
+        </createTable>
+         <addForeignKeyConstraint baseTableName="item_price" baseColumnNames="location_id"
+        constraintName="location_item__price_fk" referencedTableName="location"
+        referencedColumnNames="id" onDelete="CASCADE" />
+    <addForeignKeyConstraint baseTableName="item_price" baseColumnNames="item_id"
+        constraintName="item_item__price_fk" referencedTableName="item"
         referencedColumnNames="id" onDelete="CASCADE" />
     </changeSet>
 

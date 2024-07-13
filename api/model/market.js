@@ -1,7 +1,7 @@
 const { DataTypes, Sequelize } = require( 'sequelize' );
 const database = require( '../util/database' );
 
-const Market = database.sequelize.define( 'Market', {
+const Market = database.sequelize.define( 'market', {
     id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -14,16 +14,18 @@ const Market = database.sequelize.define( 'Market', {
     description: {
         type: DataTypes.STRING,
     },
-    created_datetime: {
+    createdDatetime: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: Sequelize.NOW,
+        field: "created_datetime"
 
     },
-    modified_datetime: {
+    modifiedDatetime: {
         type: DataTypes.DATE,
         allowNull: true,
         defaultValue: Sequelize.NOW,
+        field: "modified_datetime"
     }
 }, {
     timestamps: false,

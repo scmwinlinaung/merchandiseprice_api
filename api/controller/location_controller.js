@@ -56,7 +56,7 @@ exports.updateLocation = async ( req, res, next ) =>
             district: district,
             subdistrict: subdistrict,
             city: city,
-            modified_datetime: new Date(),
+            modifiedDatetime: new Date(),
         }
         const result = await Location.update( location, {
             where: {

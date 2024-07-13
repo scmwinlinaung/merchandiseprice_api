@@ -1,6 +1,6 @@
 const { DataTypes, Sequelize } = require( 'sequelize' );
 const database = require( '../util/database' );
-const Item = database.sequelize.define( 'Item', {
+const Item = database.sequelize.define( 'item', {
     id: {
         type: DataTypes.UUID,
         defaultValue: DataTypes.UUIDV4,
@@ -8,51 +8,29 @@ const Item = database.sequelize.define( 'Item', {
     },
     name: {
         type: DataTypes.ENUM,
-        values: [ 'USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP' ],
+        values: [ 'USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL' ],
     },
-    market_id: {
+    marketId: {
         type: DataTypes.STRING,
         allowNull: false,
-    },
-    location_id: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    buy_price: {
-        type: DataTypes.DOUBLE,
-        allowNull: false,
-    },
-    sell_price: {
-        type: DataTypes.DOUBLE,
-        allowNull: false,
-    },
-    buy_price_changes: {
-        type: DataTypes.DOUBLE,
-        allowNull: false,
-    },
-    sell_price_changes: {
-        type: DataTypes.DOUBLE,
-        allowNull: false,
+        field: "market_id"
     },
     unit: {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    status: {
-        type: DataTypes.ENUM,
-        values: [ "UP", "DOWN" ],
-        allowNull: false,
-    },
-    created_datetime: {
+    createdDatetime: {
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: Sequelize.NOW,
+        field: "created_datetime"
 
     },
-    modified_datetime: {
+    modifiedDatetime: {
         type: DataTypes.DATE,
         allowNull: true,
         defaultValue: Sequelize.NOW,
+        field: "modified_datetime"
     }
 }, {
     timestamps: false,
