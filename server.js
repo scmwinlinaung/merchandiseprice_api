@@ -1,19 +1,21 @@
-const express = require( 'express' );
-const liquibase = require( './api/util/liquibase' )
-const dbConnection = require( './api/util/db_connection' )
-const marketRoute = require( './api/route/market_route' );
-const locationRoute = require( './api/route/location_route' );
-const itemRoute = require( './api/route/item_route' );
-const itemPriceRoute = require( './api/route/item_price_route' );
-const Market = require( './api/model/market' )
+const express = require( "express" );
+const dotenv = require( "dotenv" )
+const liquibase = require( "./api/util/liquibase" )
+const dbConnection = require( "./api/util/db_connection" )
+const marketRoute = require( "./api/route/market_route" );
+const locationRoute = require( "./api/route/location_route" );
+const itemRoute = require( "./api/route/item_route" );
+const itemPriceRoute = require( "./api/route/item_price_route" );
+const jwtRoute = require( "./api/route/jwt_route" );
+const Market = require( "./api/model/market" )
 const app = express();
 const port = 7000;
 
-const { v4: uuidv4 } = require( 'uuid' );
-const { sequelize } = require( './api/util/database' )
+const { v4: uuidv4 } = require( "uuid" );
+const { sequelize } = require( "./api/util/database" )
 async function main ()
 {
-
+    dotenv.config();
     await dbConnection.createDatabase();
     await liquibase.updateLiquibase();
     const markets = [
@@ -53,10 +55,11 @@ async function main ()
     app.use( express.json() );
 
 
-    app.use( '/api/v1', marketRoute );
-    app.use( '/api/v1/', locationRoute );
-    app.use( '/api/v1/', itemRoute );
-    app.use( '/api/v1/', itemPriceRoute );
+    app.use( "/api/v1/", marketRoute );
+    app.use( "/api/v1/", locationRoute );
+    app.use( "/api/v1/", itemRoute );
+    app.use( "/api/v1/", itemPriceRoute );
+    app.use( "/api/v1/", jwtRoute );
     // Start the server
     app.listen( port, () =>
     {
@@ -64,11 +67,11 @@ async function main ()
     } );
 
     // Properly close the Sequelize connection when the process is terminated
-    process.on( 'SIGTERM', () =>
+    process.on( "SIGTERM", () =>
     {
         sequelize.close().then( () =>
         {
-            console.log( 'Database connection closed.' );
+            console.log( "Database connection closed." );
             process.exit( 0 );
         } );
     } );

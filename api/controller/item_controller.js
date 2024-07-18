@@ -138,10 +138,11 @@ exports.summaryOfAllLatestItem = async ( req, res, next ) =>
 
 exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
 {
-    const query = `SELECT item.name, item.unit, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status
-            FROM item
+    const marketId = req.params.marketId
+    const query = `SELECT item.name, item.unit, itemPrice.buy_price AS "buyPrice", itemPrice.sell_price AS "sellPrice", itemPrice.status, itemPrice.created_datetime AS "createdDatetime",itemPrice.modified_datetime AS "modifiedDatetime"
+            FROM item 
             JOIN (
-                SELECT itemPrice.item_id, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status
+                SELECT itemPrice.item_id, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status,itemPrice.created_datetime,itemPrice.modified_datetime
                 FROM item_price itemPrice
                 WHERE itemPrice.created_datetime = (
                     SELECT MAX(innerItemPrice.created_datetime)
@@ -149,7 +150,7 @@ exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
                     WHERE innerItemPrice.item_id = itemPrice.item_id
                     limit 1
                 )
-            ) itemPrice ON itemPrice.item_id = item.id
+            ) itemPrice ON itemPrice.item_id = item.id where market_id = '${ marketId }'
     ;
     `;
     try

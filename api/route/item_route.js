@@ -13,6 +13,6 @@ router.route( '/summaryOfAllLatestItem' )
     .get( itemController.summaryOfAllLatestItem )
 router.route( '/itemName' )
     .get( itemController.listOfItemName )
-router.route( '/allItemWithLatestPrice' )
+router.route( '/allItemWithLatestPrice/:marketId' )
     .get( itemController.listOfAllItemWithLatestPrice )
 module.exports = router;
