@@ -1,5 +1,6 @@
 const { DataTypes, Sequelize } = require( "sequelize" );
 const database = require( "../util/database" );
+const { ITEM_PRICE_STATUS } = require( "../constant/item_constant" );
 const ItemPrice = database.sequelize.define( "item_price", {
     id: {
         type: DataTypes.UUID,
@@ -39,7 +40,7 @@ const ItemPrice = database.sequelize.define( "item_price", {
     },
     status: {
         type: DataTypes.ENUM,
-        values: [ "UP", "DOWN", "UNCHANGE" ],
+        values: ITEM_PRICE_STATUS,
         allowNull: false,
 
     },

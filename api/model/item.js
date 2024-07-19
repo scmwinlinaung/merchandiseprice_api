@@ -1,5 +1,6 @@
 const { DataTypes, Sequelize } = require( 'sequelize' );
 const database = require( '../util/database' );
+const { CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT, CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT } = require( '../constant/item_constant' );
 const Item = database.sequelize.define( 'item', {
     id: {
         type: DataTypes.UUID,
@@ -8,7 +9,7 @@ const Item = database.sequelize.define( 'item', {
     },
     name: {
         type: DataTypes.ENUM,
-        values: [ 'USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL' ],
+        values: [ ...CURRENCY_CONSTANT, ...OIL_CONSTANT, ...GOLD_CONSTANT, ...VEGETABLE_CONSTANT ]
     },
     marketId: {
         type: DataTypes.STRING,
@@ -16,8 +17,8 @@ const Item = database.sequelize.define( 'item', {
         field: "market_id"
     },
     unit: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.ENUM,
+        values: [ ...CURRENCY_UNIT, ...OIL_UNIT, ...GOLD_UNIT, ...VEGETABLE_UNIT ]
     },
     createdDatetime: {
         type: DataTypes.DATE,

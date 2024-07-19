@@ -12,45 +12,16 @@ const app = express();
 const port = 7000;
 
 const { v4: uuidv4 } = require( "uuid" );
-const { sequelize } = require( "./api/util/database" )
+const { sequelize } = require( "./api/util/database" );
+const { MARKETS_CONSTANT } = require( "./api/constant/market_constant" );
+const { CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT, CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT } = require( "./api/constant/item_constant" );
+const Item = require( "./api/model/item" );
 async function main ()
 {
     dotenv.config();
     await dbConnection.createDatabase();
     await liquibase.updateLiquibase();
-    const markets = [
-        {
-            "name": "Vegetable",
-            "description": "Vegetable"
-        },
-        {
-            "name": "Currency",
-            "description": "Fiat Currency"
-        }, {
-            "name": "Gold Price",
-            "description": "Gold Price"
-        }, {
-            "name": "Diseal And Petrol Price",
-            "description": "Diseal And Petrol Price"
-        } ]
-
-    const marketLength = await Market.count();
-    // create markets
-    if ( marketLength == 0 )
-    {
-        for ( let i = 0; i < markets.length; i++ )
-        {
-            console.log( markets[ i ][ "name" ] )
-            await Market.create( {
-                "id": uuidv4(),
-                "name": markets[ i ][ "name" ],
-                "description": markets[ i ][ "description" ],
-                "created_datetime": new Date(),
-                "modified_datetime": new Date(),
-            } )
-        }
-    }
-
+    await createDefaultMarketAndItems();
     // Middleware to parse JSON bodies
     app.use( express.json() );
 
@@ -76,4 +47,45 @@ async function main ()
         } );
     } );
 }
+async function createDefaultMarketAndItems ()
+{
+
+
+    const marketLength = await Market.count();
+    // create markets
+    if ( marketLength == 0 )
+    {
+        for ( let i = 0; i < MARKETS_CONSTANT.length; i++ )
+        {
+            console.log( "MARKET = " + MARKETS_CONSTANT[ i ][ "name" ] )
+            const marketId = uuidv4();
+            await Market.create( {
+                "id": marketId,
+                "name": MARKETS_CONSTANT[ i ][ "name" ],
+                "description": MARKETS_CONSTANT[ i ][ "description" ],
+                "created_datetime": new Date(),
+                "modified_datetime": new Date(),
+            } )
+            const allItems = [ CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT ]
+            const allUnits = [ CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT ]
+            const itemLength = await Item.count();
+            if ( itemLength == 0 )
+            {
+                for ( let j = 0; j < allItems[ i ].length; j++ )
+                {
+                    console.log( " j value is = " + j )
+                    const item = {
+                        id: uuidv4(),
+                        name: allItems[ i ][ j ],
+                        marketId: marketId,
+                        unit: allUnits[ i ][ j ],
+                    }
+                    await Item.create( item );
+                }
+            }
+        }
+    }
+}
+
+
 main().catch( console.log )
