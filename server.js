@@ -52,8 +52,9 @@ async function createDefaultMarketAndItems ()
 
 
     const marketLength = await Market.count();
+    const itemLegnth = await Item.count();
     // create markets
-    if ( marketLength == 0 )
+    if ( marketLength == 0 && itemLegnth == 0 )
     {
         for ( let i = 0; i < MARKETS_CONSTANT.length; i++ )
         {
