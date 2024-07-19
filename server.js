@@ -16,6 +16,7 @@ const { sequelize } = require( "./api/util/database" );
 const { MARKETS_CONSTANT } = require( "./api/constant/market_constant" );
 const { CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT, CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT } = require( "./api/constant/item_constant" );
 const Item = require( "./api/model/item" );
+const { validateToken } = require( "./api/controller/jwt_controller" );
 async function main ()
 {
     dotenv.config();
@@ -24,13 +25,30 @@ async function main ()
     await createDefaultMarketAndItems();
     // Middleware to parse JSON bodies
     app.use( express.json() );
+    // check jwt token
 
-
+    app.use( async ( req, res, next ) =>
+    {
+        const generateTokenRouteName = "/api/v1/generateToken";
+        // if route name is generateTokenRouteName, we don't need to check token is valid
+        if ( !( req.originalUrl == generateTokenRouteName ) )
+        {
+            const tokenHeaderKey = process.env.TOKEN_HEADER_KEY;
+            const token = req.header( tokenHeaderKey );
+            const tokenStatus = await validateToken( token );
+            if ( tokenStatus ) return next()
+            else res.status( 401 ).send( "Unauthorized Exception" )
+        } else
+        {
+            next();
+        }
+    } )
     app.use( "/api/v1/", marketRoute );
     app.use( "/api/v1/", locationRoute );
     app.use( "/api/v1/", itemRoute );
     app.use( "/api/v1/", itemPriceRoute );
     app.use( "/api/v1/", jwtRoute );
+
     // Start the server
     app.listen( port, () =>
     {

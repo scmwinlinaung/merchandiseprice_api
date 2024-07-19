@@ -38,7 +38,7 @@ exports.generateToken = async ( req, res, next ) =>
 };
 
 // Verification of JWT
-exports.validateToken = async ( req, res, next ) =>
+exports.validateToken = async ( token ) =>
 {
     // Tokens are generally passed in header of request
     // Due to security reasons.
@@ -58,24 +58,20 @@ exports.validateToken = async ( req, res, next ) =>
 
     const pem = jwkToPem( jwk, { private: true } );
 
-    let tokenHeaderKey = process.env.TOKEN_HEADER_KEY;
-
     try
     {
-        const token = req.header( tokenHeaderKey );
-
         const verified = jwt.verify( token, pem );
         if ( verified )
         {
-            return res.send( "Successfully Verified" );
+            return true;
         } else
         {
             // Access Denied
-            return res.status( 401 ).send( error );
+            return false;
         }
     } catch ( error )
     {
         // Access Denied
-        return res.status( 401 ).send( error );
+        return false;
     }
 } 
