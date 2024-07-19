@@ -57,7 +57,6 @@ async function createDefaultMarketAndItems ()
     {
         for ( let i = 0; i < MARKETS_CONSTANT.length; i++ )
         {
-            console.log( "MARKET = " + MARKETS_CONSTANT[ i ][ "name" ] )
             const marketId = uuidv4();
             await Market.create( {
                 "id": marketId,
@@ -68,21 +67,18 @@ async function createDefaultMarketAndItems ()
             } )
             const allItems = [ CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT ]
             const allUnits = [ CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT ]
-            const itemLength = await Item.count();
-            if ( itemLength == 0 )
+
+            for ( let j = 0; j < allItems[ i ].length; j++ )
             {
-                for ( let j = 0; j < allItems[ i ].length; j++ )
-                {
-                    console.log( " j value is = " + j )
-                    const item = {
-                        id: uuidv4(),
-                        name: allItems[ i ][ j ],
-                        marketId: marketId,
-                        unit: allUnits[ i ][ j ],
-                    }
-                    await Item.create( item );
+                const item = {
+                    id: uuidv4(),
+                    name: allItems[ i ][ j ],
+                    marketId: marketId,
+                    unit: allUnits[ i ][ j ] == null ? allUnits[ i ][ 0 ] : allUnits[ i ][ j ],
                 }
+                await Item.create( item );
             }
+
         }
     }
 }
