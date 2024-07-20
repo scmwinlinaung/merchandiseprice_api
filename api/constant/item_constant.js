@@ -1,7 +1,7 @@
 const CURRENCY_CONSTANT = [ 'USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', ];
 const OIL_CONSTANT = [ '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL' ];
 const GOLD_CONSTANT = [ 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 15', 'MYANMAR GOLD PRICE 16' ];
-const VEGETABLE_CONSTANT = [ 'CONE PRICE', 'PALM OIL' ];
+const VEGETABLE_CONSTANT = [ 'CONE', 'PALM OIL' ];
 const ITEM_PRICE_STATUS = [ "UP", "DOWN", "UNCHANGE" ];
 const CURRENCY_UNIT = [ '$', '€', 'S$', '฿', '¥', 'RM', 'CN¥', '₩', '£', 'AU$', 'Can$', 'NT$', 'د.إ', '₹', 'HK$', 'MOP$' ]
 const OIL_UNIT = [ '1 litre' ]

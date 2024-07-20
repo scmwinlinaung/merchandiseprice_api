@@ -9,7 +9,7 @@
       <sql>
        CREATE TYPE ITEM_UNIT AS ENUM ('$', '€', 'S$', '฿', '¥', 'RM', 'CN¥', '₩', '£', 'AU$', 'Can$', 'NT$', 'د.إ', '₹', 'HK$', 'MOP$', '1 litre','1 oz', '15 pae ye','16 pae ye', '1 kg');
             CREATE TYPE STATUS AS ENUM ('UP', 'DOWN', 'UNCHANGE');
-            CREATE TYPE ITEM_NAME AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL', 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 16', 'MYANMAR GOLD PRICE 15', 'CONE PRICE', 'PALM OIL');
+            CREATE TYPE ITEM_NAME AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL', 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 16', 'MYANMAR GOLD PRICE 15', 'CONE', 'PALM OIL');
            
         </sql>
         <createTable tableName="market">
