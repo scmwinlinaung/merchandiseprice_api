@@ -17,16 +17,19 @@ const { MARKETS_CONSTANT } = require( "./api/constant/market_constant" );
 const { CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT, CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT } = require( "./api/constant/item_constant" );
 const Item = require( "./api/model/item" );
 const { validateToken } = require( "./api/controller/jwt_controller" );
+const { STATE_CONSTANT } = require( "./api/constant/location_constant" );
+const Location = require( "./api/model/location" );
 async function main ()
 {
     dotenv.config();
     await dbConnection.createDatabase();
     await liquibase.updateLiquibase();
     await createDefaultMarketAndItems();
+    await createLocation();
     // Middleware to parse JSON bodies
     app.use( express.json() );
     // check jwt token
-
+    // middleware
     app.use( async ( req, res, next ) =>
     {
         const generateTokenRouteName = "/api/v1/generateToken";
@@ -100,7 +103,22 @@ async function createDefaultMarketAndItems ()
 
         }
     }
-}
 
+}
+async function createLocation ()
+{
+    for ( let i = 0; i < STATE_CONSTANT.length; i++ )
+    {
+
+        const location = {
+            id: uuidv4(),
+            state: STATE_CONSTANT[ i ],
+            district: '',
+            subdistrict: '',
+            city: '',
+        }
+        await Location.create( location );
+    }
+}
 
 main().catch( console.log )

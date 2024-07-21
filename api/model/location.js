@@ -1,5 +1,6 @@
 const { DataTypes, Sequelize } = require( 'sequelize' );
 const database = require( '../util/database' );
+const { STATE_CONSTANT } = require( '../constant/location_constant' );
 
 const Location = database.sequelize.define( 'location', {
     id: {
@@ -8,8 +9,8 @@ const Location = database.sequelize.define( 'location', {
         primaryKey: true
     },
     state: {
-        type: DataTypes.STRING,
-        allowNull: false,
+        type: DataTypes.ENUM,
+        values: STATE_CONSTANT
     },
     district: {
         type: DataTypes.STRING,
