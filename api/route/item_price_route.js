@@ -7,6 +7,8 @@ router
     .put( itemPriceController.updateItemPrice )
 router.route( '/itemPrice/:itemPriceId' )
     .get( itemPriceController.getOneItemPrice )
+router.route( '/itemPriceHistory/:itemId' )
+    .get( itemPriceController.getPriceHistoryOfAItem )
 router.route( '/itemPrice/:itemPriceId' )
     .post( itemPriceController.deleteItemPrice )
 module.exports = router;

@@ -90,3 +90,24 @@ exports.getOneItemPrice = async ( req, res, next ) =>
         res.status( 500 ).json( { error: err.message } );
     }
 }
+
+exports.getPriceHistoryOfAItem = async ( req, res, next ) =>
+{
+    try
+    {
+        const itemId = req.params.itemId
+        const query = `SELECT item.name, item.unit, itemPrice.buy_price AS "buyPrice", 
+        itemPrice.sell_price AS "sellPrice",itemPrice.buy_price_changes as "buyPriceChanges", itemPrice.sell_price_changes as "sellPriceChanges", itemPrice.status, itemPrice.created_datetime AS "createdDatetime",itemPrice.modified_datetime AS "modifiedDatetime"
+        from item left join item_price itemPrice on itemPrice.item_id = item.id
+        where item.id = '${ itemId }'
+        `;
+        const result = await ItemPrice.sequelize.query( query, {
+            type: QueryTypes.SELECT
+        } );
+        res.status( 200 ).json( result );
+    }
+    catch ( err )
+    {
+        res.status( 500 ).json( { error: err.message } );
+    }
+}
