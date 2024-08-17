@@ -96,14 +96,14 @@ exports.getOneItem = async ( req, res, next ) =>
     }
 }
 
-exports.summaryOfAllLatestItem = async ( req, res, next ) =>
+exports.summaryOfAItemPrice = async ( req, res, next ) =>
 {
     try
     {
         // this endpoint will query all item between start date and end date and then aggregate item per specified date
         // 2024-06-17 00:00:00 (start date) 
         // 2024-06-18 23:59:59
-        const { name, locationId, startDate, endDate } = req.body;
+        const { itemId, locationId, startDate, endDate } = req.body;
         const result = await Item.sequelize.query( `SELECT DISTINCT ON (Item.name, TO_CHAR(Item.created_datetime, 'DD-MM-YYYY'))
             Item.name,
             Item.unit,
@@ -121,9 +121,9 @@ exports.summaryOfAllLatestItem = async ( req, res, next ) =>
                 WHERE ItemPrice.item_id = Item.id
                 AND ItemPrice.location_id = '${ locationId.trim() }'
                 and ItemPrice.created_datetime BETWEEN '${ startDate }' AND '${ endDate }'
-            ) AS item_list
+            ) AS price_history
             FROM item Item
-            WHERE Item.name = '${ name.trim() }'
+            WHERE Item.id = '${ itemId.trim() }'
              
             ORDER BY Item.name,TO_CHAR(Item.created_datetime, 'DD-MM-YYYY') DESC;
 `, {
