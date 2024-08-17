@@ -104,29 +104,28 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
         // 2024-06-17 00:00:00 (start date) 
         // 2024-06-18 23:59:59
         const { itemId, locationId, startDate, endDate } = req.body;
-        const result = await Item.sequelize.query( `SELECT DISTINCT ON (Item.name, TO_CHAR(Item.created_datetime, 'DD-MM-YYYY'))
+        const query = ` SELECT Item.name,Item.unit,(json_agg(json_build_object(
+            'buy_price', ItemPrice.buy_price,
+            'sell_price', ItemPrice.sell_price,
+            'buy_price_changes', ItemPrice.buy_price_changes,
+            'sell_price_changes', ItemPrice.sell_price_changes,
+            'status', ItemPrice.status,
+            'time', TO_CHAR(ItemPrice.created_datetime, 'HH24:MI:SS')
+    ))) as price_history
+        FROM item_price ItemPrice
+        left join item Item on Item.id = ItemPrice.item_id 
+        WHERE Item.id = '${ itemId.trim() }'
+        AND ItemPrice.location_id = '${ locationId.trim() }'
+        AND ItemPrice.created_datetime BETWEEN '${ startDate }' AND '${ endDate }'
+        GROUP BY 
             Item.name,
             Item.unit,
-            TO_CHAR(Item.created_datetime, 'DD-MM-YYYY') AS date,
-            (
-                SELECT json_agg(json_build_object(
-                    'buy_price', ItemPrice.buy_price,
-                    'sell_price', ItemPrice.sell_price,
-                    'buy_price_changes', ItemPrice.buy_price_changes,
-                    'sell_price_changes', ItemPrice.sell_price_changes,
-                    'status', ItemPrice.status,
-                    'time',TO_CHAR(ItemPrice.created_datetime, 'HH24:MI:SS')
-                ))
-                FROM item_price ItemPrice
-                WHERE ItemPrice.item_id = Item.id
-                AND ItemPrice.location_id = '${ locationId.trim() }'
-                and ItemPrice.created_datetime BETWEEN '${ startDate }' AND '${ endDate }'
-            ) AS price_history
-            FROM item Item
-            WHERE Item.id = '${ itemId.trim() }'
-             
-            ORDER BY Item.name,TO_CHAR(Item.created_datetime, 'DD-MM-YYYY') DESC;
-`, {
+            EXTRACT(YEAR FROM ItemPrice.created_datetime),
+            EXTRACT(MONTH FROM ItemPrice.created_datetime),
+            EXTRACT(DAY FROM ItemPrice.created_datetime) 
+                 `
+
+        const result = await Item.sequelize.query( query, {
             type: QueryTypes.SELECT
         } )
         res.status( 200 ).json( result );
