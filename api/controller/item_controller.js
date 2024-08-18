@@ -103,15 +103,15 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
         // this endpoint will query all item between start date and end date and then aggregate item per specified date
         // 2024-06-17 00:00:00 (start date) 
         // 2024-06-18 23:59:59
-        const { itemId, locationId, startDate, endDate } = req.body;
-        const query = ` SELECT Item.name,Item.unit,(json_agg(json_build_object(
-            'buy_price', ItemPrice.buy_price,
-            'sell_price', ItemPrice.sell_price,
-            'buy_price_changes', ItemPrice.buy_price_changes,
-            'sell_price_changes', ItemPrice.sell_price_changes,
+        const { itemId, locationId, startDate, endDate } = req.query;
+        const query = ` SELECT Item.name,Item.unit,TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD') as date,(json_agg(json_build_object(
+            'buyPrice', ItemPrice.buy_price,
+            'sellPrice', ItemPrice.sell_price,
+            'buyPriceChanges', ItemPrice.buy_price_changes,
+            'sellPriceChanges', ItemPrice.sell_price_changes,
             'status', ItemPrice.status,
             'time', TO_CHAR(ItemPrice.created_datetime, 'HH24:MI:SS')
-    ))) as price_history
+    ))) as "priceHistory"
         FROM item_price ItemPrice
         left join item Item on Item.id = ItemPrice.item_id 
         WHERE Item.id = '${ itemId.trim() }'
@@ -120,10 +120,8 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
         GROUP BY 
             Item.name,
             Item.unit,
-            EXTRACT(YEAR FROM ItemPrice.created_datetime),
-            EXTRACT(MONTH FROM ItemPrice.created_datetime),
-            EXTRACT(DAY FROM ItemPrice.created_datetime) 
-                 `
+            TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD')
+      ;`
 
         const result = await Item.sequelize.query( query, {
             type: QueryTypes.SELECT
@@ -138,7 +136,7 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
 exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
 {
     const marketId = req.params.marketId
-    const query = `SELECT item.name, item.unit,itemPrice.location_id as "locationId", itemPrice.buy_price AS "buyPrice", itemPrice.sell_price AS "sellPrice", itemPrice.status, itemPrice.created_datetime AS "createdDatetime",itemPrice.modified_datetime AS "modifiedDatetime"
+    const query = `SELECT item.id,item.name, item.unit,itemPrice.location_id as "locationId", itemPrice.buy_price AS "buyPrice", itemPrice.sell_price AS "sellPrice", itemPrice.status, itemPrice.created_datetime AS "createdDatetime",itemPrice.modified_datetime AS "modifiedDatetime"
             FROM item 
             JOIN (
                 SELECT itemPrice.item_id,itemPrice.location_id, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status,itemPrice.created_datetime,itemPrice.modified_datetime
