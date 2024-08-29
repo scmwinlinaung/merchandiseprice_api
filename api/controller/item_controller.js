@@ -5,7 +5,8 @@ exports.listOfItemName = async ( req, res, next ) =>
 {
     try
     {
-        const items = await Item.sequelize.query( "select distinct name from item order by name desc;", {
+        const marketId = req.params.marketId;
+        const items = await Item.sequelize.query( `select distinct name from item where market_id = '${ marketId.trim() }' order by name desc;`, {
             type: QueryTypes.SELECT
         } );
 
@@ -103,8 +104,13 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
         // this endpoint will query all item between start date and end date and then aggregate item per specified date
         // 2024-06-17 00:00:00 (start date) 
         // 2024-06-18 23:59:59
+
         const { itemId, locationId, startDate, endDate } = req.query;
-        const query = ` SELECT Item.name,Item.unit,TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD') as date,(json_agg(json_build_object(
+        console.log( itemId );
+        console.log( locationId );
+        console.log( startDate );
+        console.log( endDate )
+        const query = `SELECT Item.name,Item.unit,TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD') as date,(json_agg(json_build_object(
             'buyPrice', ItemPrice.buy_price,
             'sellPrice', ItemPrice.sell_price,
             'buyPriceChanges', ItemPrice.buy_price_changes,
@@ -126,6 +132,7 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
         const result = await Item.sequelize.query( query, {
             type: QueryTypes.SELECT
         } )
+        console.log( result );
         res.status( 200 ).json( result );
     } catch ( err )
     {
