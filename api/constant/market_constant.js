@@ -5,8 +5,8 @@ const MARKETS_CONSTANT = [
         "description": "Fiat Currency"
     },
     {
-        "name": "Diseal And Petrol Price",
-        "description": "Diseal And Petrol Price"
+        "name": "Petrol And Diseal Price",
+        "description": "Petrol And Diseal Price"
     },
     {
         "name": "Gold Price",
