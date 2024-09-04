@@ -1,12 +1,12 @@
 const { Liquibase, POSTGRESQL_DEFAULT_CONFIG } = require( 'liquibase' );
+const { DATABASE_USERNAME, DATABASE_URL, DATABASE_PASSWORD } = require( '../constant/database_constant' );
 
-const databaseName = 'merchandiseprice';
 const liquibaseConfig = {
     ...POSTGRESQL_DEFAULT_CONFIG,
     changeLogFile: 'changelog.xml',
-    url: `jdbc:postgresql://localhost:5432/${ databaseName }`,
-    username: 'postgres',
-    password: 'root',
+    url: DATABASE_URL,
+    username: DATABASE_USERNAME,
+    password: DATABASE_PASSWORD,
     driver: 'org.postgresql.Driver',
     classpath: './lib/postgresql-42.7.3.jar',
     logLevel: 'debug', // Optional: set log level

@@ -1,12 +1,13 @@
 const { Sequelize } = require( 'sequelize' );
+const { DATABASE_USERNAME, DATABASE_NAME, DATABASE_PASSWORD, DATABASE_PORT, DATABASE_URL, DATABASE_HOST } = require( '../constant/database_constant' );
 const database = 'merchandiseprice';
 const sequelize = new Sequelize( 'merchandiseprice', 'postgres', 'root', {
-    host: '127.0.0.1',
+    host: DATABASE_HOST,
     dialect: 'postgres',
-    username: 'postgres',
-    database: database,
-    password: 'root',
-    port: 5432
+    username: DATABASE_USERNAME,
+    database: DATABASE_NAME,
+    password: DATABASE_PASSWORD,
+    port: DATABASE_PORT
 } );
 const connectDB = async () =>
 {
