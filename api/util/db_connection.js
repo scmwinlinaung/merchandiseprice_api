@@ -1,13 +1,17 @@
 const { Client, Pool } = require( 'pg' );
-const database = require( './database' );
-const { DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_URL, DATABASE_PORT, DATABASE_HOST } = require( '../constant/database_constant' );
-const databaseName = 'merchandiseprice';
+const { DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_PORT, DATABASE_HOST, DATABASE_NAME } = require( '../constant/database_constant' );
 
 const newDatabaseClient = new Client( {
+    ssl: true,
     user: DATABASE_USERNAME,
     host: DATABASE_HOST,
     password: DATABASE_PASSWORD,
     port: DATABASE_PORT,
+    database: DATABASE_NAME,
+    ssl: {
+        rejectUnauthorized: false,
+        require: true,
+    },
 } );
 
 const createDatabase = async () =>
@@ -19,16 +23,15 @@ const createDatabase = async () =>
         // Check if the database already exists
         const checkDbQuery = `SELECT datname FROM pg_database`;
         const res = await newDatabaseClient.query( checkDbQuery );
-
-        if ( res.rows.some( ( e ) => e[ 'datname' ] == databaseName ) )
+        if ( res.rows.some( ( e ) => e[ 'datname' ] === DATABASE_NAME ) )
         {
-            console.log( `Database ${ databaseName } already exists.` );
+            console.log( `Database ${ DATABASE_NAME } already exists.` );
         } else
         {
             // Create the new database
-            const createDbQuery = `CREATE DATABASE ${ databaseName }`;
+            const createDbQuery = `CREATE DATABASE ${ DATABASE_NAME }`;
             await newDatabaseClient.query( createDbQuery );
-            console.log( `Database ${ databaseName } created successfully.` );
+            console.log( `Database ${ DATABASE_NAME } created successfully.` );
         }
     } catch ( err )
     {

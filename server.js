@@ -10,7 +10,6 @@ const jwtRoute = require( "./api/route/jwt_route" );
 const Market = require( "./api/model/market" )
 const app = express();
 const port = 7000;
-
 const { v4: uuidv4 } = require( "uuid" );
 const { sequelize } = require( "./api/util/database" );
 const { MARKETS_CONSTANT } = require( "./api/constant/market_constant" );
@@ -53,7 +52,7 @@ async function main ()
     app.use( "/api/v1/", jwtRoute );
 
     // Start the server
-    app.listen( port, () =>
+    app.listen( port, '0.0.0.0', () =>
     {
         console.log( `Server is running on http://localhost:${ port }` );
     } );

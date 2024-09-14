@@ -10,6 +10,7 @@ const liquibaseConfig = {
     driver: 'org.postgresql.Driver',
     classpath: './lib/postgresql-42.7.3.jar',
     logLevel: 'debug', // Optional: set log level
+
 };
 
 // Initialize Liquibase instance
