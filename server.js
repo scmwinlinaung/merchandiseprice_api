@@ -106,6 +106,8 @@ async function createDefaultMarketAndItems ()
 }
 async function createLocation ()
 {
+    const locationLength = await Location.count();
+    if(locationLength == 0) {
     for ( let i = 0; i < STATE_CONSTANT.length; i++ )
     {
 
@@ -118,6 +120,7 @@ async function createLocation ()
         }
         await Location.create( location );
     }
+}
 }
 
 main().catch( console.log )
