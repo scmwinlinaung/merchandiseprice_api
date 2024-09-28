@@ -27,14 +27,14 @@ const Location = database.sequelize.define( 'location', {
     createdDatetime: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Sequelize.NOW,
+        defaultValue: new Date(),
         field: "created_datetime"
 
     },
     modifiedDatetime: {
         type: DataTypes.DATE,
         allowNull: true,
-        defaultValue: Sequelize.NOW,
+        defaultValue: new Date(),
         field: "modified_datetime"
     }
 }, {

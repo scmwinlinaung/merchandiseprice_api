@@ -143,8 +143,7 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
 exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
 {
     const marketId = req.params.marketId
-    console.log("MARKET ID = " + marketId);
-    const query = `SELECT item.id,item.name, item.unit,itemPrice.location_id as "locationId", itemPrice.buy_price AS "buyPrice", itemPrice.sell_price AS "sellPrice", itemPrice.status, itemPrice.created_datetime AS "createdDatetime",itemPrice.modified_datetime AS "modifiedDatetime"
+    const query = `SELECT DISTINCT ON (item.id) item.id,item.name, item.unit,itemPrice.location_id as "locationId", itemPrice.buy_price AS "buyPrice", itemPrice.sell_price AS "sellPrice", itemPrice.status, itemPrice.created_datetime AS "createdDatetime",itemPrice.modified_datetime AS "modifiedDatetime"
             FROM item 
             JOIN (
                 SELECT itemPrice.item_id,itemPrice.location_id, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status,itemPrice.created_datetime,itemPrice.modified_datetime
@@ -163,7 +162,6 @@ exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
         const result = await Item.sequelize.query( query, {
             type: QueryTypes.SELECT
         } );
-        console.log("RESULT = " +result)
         res.status( 200 ).json( result );
     } catch ( error )
     {

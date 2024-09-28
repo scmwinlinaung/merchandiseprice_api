@@ -23,14 +23,14 @@ const Item = database.sequelize.define( 'item', {
     createdDatetime: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: Sequelize.NOW,
+        defaultValue: new Date(),
         field: "created_datetime"
 
     },
     modifiedDatetime: {
         type: DataTypes.DATE,
         allowNull: true,
-        defaultValue: Sequelize.NOW,
+        defaultValue: new Date(),
         field: "modified_datetime"
     }
 }, {
