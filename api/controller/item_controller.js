@@ -169,4 +169,19 @@ exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
     }
 }
 
+exports.listOfAll = async ( req, res, next ) =>
+{
+	const query = `SELECT * FROM item ORDER BY name ASC;`;
+	try
+	{
+		const result = await Item.sequelize
+			.query( query, {
+				type: QueryTypes.SELECT
+			} );		
+		res.status( 200 ).json( result );
+	} catch ( error )
+	{
+		console.error( 'Error : ', error );
+	}	
+}
 

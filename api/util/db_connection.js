@@ -2,16 +2,16 @@ const { Client, Pool } = require( 'pg' );
 const { DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_PORT, DATABASE_HOST, DATABASE_NAME } = require( '../constant/database_constant' );
 
 const newDatabaseClient = new Client( {
-    ssl: true,
+    ssl: false,
     user: DATABASE_USERNAME,
     host: DATABASE_HOST,
     password: DATABASE_PASSWORD,
     port: DATABASE_PORT,
     database: DATABASE_NAME,
-    ssl: {
-        rejectUnauthorized: false,
-        require: true,
-    },
+    //ssl: {
+    //    rejectUnauthorized: false,
+    //    require: false,
+    //},
 } );
 
 const createDatabase = async () =>

@@ -17,8 +17,7 @@ const Item = database.sequelize.define( 'item', {
         field: "market_id"
     },
     unit: {
-        type: DataTypes.ENUM,
-        values: [ ...CURRENCY_UNIT, ...OIL_UNIT, ...GOLD_UNIT, ...VEGETABLE_UNIT ]
+		type: 'myan_market.item_unit',
     },
     createdDatetime: {
         type: DataTypes.DATE,
@@ -34,6 +33,7 @@ const Item = database.sequelize.define( 'item', {
         field: "modified_datetime"
     }
 }, {
+	schema:'myan_market',
     timestamps: false,
     tableName: 'item'
 } );

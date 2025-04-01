@@ -38,6 +38,7 @@ const Location = database.sequelize.define( 'location', {
         field: "modified_datetime"
     }
 }, {
+	schema:'myan_market',
     timestamps: false,
     tableName: 'location'
 } );

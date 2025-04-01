@@ -58,6 +58,7 @@ const ItemPrice = database.sequelize.define( "item_price", {
         field: "modified_datetime"
     }
 }, {
+	schema:'myan_market',
     timestamps: false,
     tableName: "item_price"
 } );

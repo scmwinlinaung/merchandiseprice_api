@@ -28,6 +28,7 @@ const Market = database.sequelize.define( 'market', {
         field: "modified_datetime"
     }
 }, {
+	schema:'myan_market',
     timestamps: false,
     tableName: 'market'
 } );

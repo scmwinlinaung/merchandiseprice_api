@@ -5,14 +5,22 @@
     xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
 
-    <changeSet id="19_07_2024_CREATE_ALL_TABLES" author="WINLINAUNG" >
-      <sql>
-       CREATE TYPE ITEM_UNIT AS ENUM ('$', '€', 'S$', '฿', '¥', 'RM', 'CN¥', '₩', '£', 'AU$', 'Can$', 'NT$', 'د.إ', '₹', 'HK$', 'MOP$', '1 litre','1 oz', '15 pae ye','16 pae ye', '1 kg');
-            CREATE TYPE STATUS AS ENUM ('UP', 'DOWN', 'UNCHANGE');
-            CREATE TYPE ITEM_NAME AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL', 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 16', 'MYANMAR GOLD PRICE 15', 'CONE', 'PALM OIL');
-            CREATE TYPE STATE AS ENUM('YANGON', 'MANDALAY', 'NAYPYITAW', 'AYARWADDY', 'BAGO', 'MAGWAY', 'SAGAING', 'TANINTHARYI', 'CHIN', 'KACHIN', 'KAYAH', 'KAYIN', 'MON', 'RAKHINE', 'SHAN' );
+    <!-- Create Schema -->
+    <changeSet id="19_07_2024_CREATE_SCHEMA" author="WINLINAUNG">
+        <sql>
+            CREATE SCHEMA IF NOT EXISTS myan_market;
         </sql>
-        <createTable tableName="market">
+    </changeSet>
+
+    <changeSet id="19_07_2024_CREATE_ALL_TABLES" author="WINLINAUNG">
+        <sql>
+            CREATE TYPE myan_market.ITEM_UNIT AS ENUM ('$', '€', 'S$', '฿', '¥', 'RM', 'CN¥', '₩', '£', 'AU$', 'Can$', 'NT$', 'د.إ', '₹', 'HK$', 'MOP$', '1 litre','1 oz', '15 pae ye','16 pae ye', '1 kg');
+            CREATE TYPE myan_market.STATUS AS ENUM ('UP', 'DOWN', 'UNCHANGE');
+            CREATE TYPE myan_market.ITEM_NAME AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL', 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 16', 'MYANMAR GOLD PRICE 15', 'CONE', 'PALM OIL');
+            CREATE TYPE myan_market.STATE AS ENUM ('YANGON', 'MANDALAY', 'NAYPYITAW', 'AYARWADDY', 'BAGO', 'MAGWAY', 'SAGAING', 'TANINTHARYI', 'CHIN', 'KACHIN', 'KAYAH', 'KAYIN', 'MON', 'RAKHINE', 'SHAN');
+        </sql>
+
+        <createTable tableName="myan_market.market">
             <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
             </column>
@@ -21,34 +29,39 @@
             <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
             <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
         </createTable>
-          <createTable tableName="location">
+
+        <createTable tableName="myan_market.location">
             <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="state" type="STATE"/>
+            <column name="state" type="myan_market.STATE"/>
             <column name="district" type="VARCHAR(255)"/>
             <column name="subdistrict" type="VARCHAR(255)"/>
             <column name="city" type="VARCHAR(255)"/>
             <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
             <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
         </createTable>
-         <createTable tableName="item">
+
+        <createTable tableName="myan_market.item">
             <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
             </column>
-            <column name="name" type="ITEM_NAME"/>
+            <column name="name" type="myan_market.ITEM_NAME"/>
             <column name="market_id" type="varchar(255)"/>
-            <column name="unit" type="ITEM_UNIT"/>
+            <column name="unit" type="myan_market.ITEM_UNIT"/>
             <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
             <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
         </createTable>
-         <createIndex indexName="item_name" tableName="item">
+
+        <createIndex indexName="item_name" tableName="myan_market.item">
             <column name="name"/>
         </createIndex>
-        <addForeignKeyConstraint baseTableName="item" baseColumnNames="market_id"
-        constraintName="market_item_fk" referencedTableName="market"
-        referencedColumnNames="id" onDelete="CASCADE" />
-        <createTable tableName="item_price">
+
+        <addForeignKeyConstraint baseTableName="myan_market.item" baseColumnNames="market_id"
+            constraintName="market_item_fk" referencedTableName="myan_market.market"
+            referencedColumnNames="id" onDelete="CASCADE" />
+
+        <createTable tableName="myan_market.item_price">
             <column name="id" type="varchar(255)">
                 <constraints primaryKey="true"/>
             </column>
@@ -57,17 +70,19 @@
             <column name="sell_price" type="double"/>
             <column name="buy_price_changes" type="double"/>
             <column name="sell_price_changes" type="double"/>
-            <column name="status" type="STATUS"/>
+            <column name="status" type="myan_market.STATUS"/>
             <column name="location_id" type="varchar(255)"/>
             <column name="created_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
             <column name="modified_datetime" type="timestamp" defaultValueComputed="current_timestamp"/>
         </createTable>
-         <addForeignKeyConstraint baseTableName="item_price" baseColumnNames="location_id"
-        constraintName="location_item__price_fk" referencedTableName="location"
-        referencedColumnNames="id" onDelete="CASCADE" />
-    <addForeignKeyConstraint baseTableName="item_price" baseColumnNames="item_id"
-        constraintName="item_item__price_fk" referencedTableName="item"
-        referencedColumnNames="id" onDelete="CASCADE" />
+
+        <addForeignKeyConstraint baseTableName="myan_market.item_price" baseColumnNames="location_id"
+            constraintName="location_item_price_fk" referencedTableName="myan_market.location"
+            referencedColumnNames="id" onDelete="CASCADE" />
+
+        <addForeignKeyConstraint baseTableName="myan_market.item_price" baseColumnNames="item_id"
+            constraintName="item_item_price_fk" referencedTableName="myan_market.item"
+            referencedColumnNames="id" onDelete="CASCADE" />
     </changeSet>
 
 </databaseChangeLog>
