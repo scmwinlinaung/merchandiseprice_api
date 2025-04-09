@@ -15,6 +15,10 @@ const { MARKETS_CONSTANT } = require("./api/constant/market_constant");
 const { CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT, CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT } = require("./api/constant/item_constant");
 const { STATE_CONSTANT } = require("./api/constant/location_constant");
 
+// Swagger dependencies
+const swaggerUi = require('swagger-ui-express');
+const swaggerSpec = require('./swagger'); // Import the Swagger configuration
+
 const app = express();
 const port = 7000;
 
@@ -33,20 +37,31 @@ async function main() {
     app.use(express.json());
 
     // JWT middleware
-    app.use(async (req, res, next) => {
-      const generateTokenRouteName = "/api/v1/generateToken";
-      if (req.originalUrl !== generateTokenRouteName) {
-        const tokenHeaderKey = process.env.TOKEN_HEADER_KEY;
-        const token = req.header(tokenHeaderKey);
-        const tokenStatus = await validateToken(token);
-        if (!tokenStatus) {
-          return res.status(401).send("Unauthorized Exception");
-        }
-      }
-      next();
-    });
-
+	app.use(async (req, res, next) => {
+		const generateTokenRouteName = "/api/v1/generateToken";
+		const swaggerApiRoutePrefix = "/api-docs";
+	  
+		if (
+		  req.originalUrl !== generateTokenRouteName &&
+		  !req.originalUrl.startsWith(swaggerApiRoutePrefix)
+		) {
+		  const tokenHeaderKey = process.env.TOKEN_HEADER_KEY || 'authorization';
+		  const headerKey = tokenHeaderKey.toLowerCase(); // All headers in req.headers are lowercase
+		  const token = req.headers[headerKey];
+	
+		  const tokenStatus = await validateToken(token);
+		  console.log("Token Status: ", tokenStatus);
+		  if (!tokenStatus) {
+			return res.status(401).send("Unauthorized Exception");
+		  }
+		}
+		next();
+	  });
+	  
     // Routes
+	   // Serve Swagger UI at /api-docs
+	app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+
     app.use("/api/v1/", marketRoute);
     app.use("/api/v1/", locationRoute);
     app.use("/api/v1/", itemRoute);
@@ -56,6 +71,7 @@ async function main() {
     // Start the server
     app.listen(port, '0.0.0.0', () => {
       console.log(`Server is running on http://localhost:${port}`);
+      console.log(`Swagger UI is available at http://localhost:${port}/api-docs`);
     });
 
     // Handle process termination

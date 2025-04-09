@@ -67,7 +67,7 @@ exports.deleteItem = async ( req, res, next ) =>
 {
     try
     {
-        await Item.sequelize.query( `delete from item where id = '${ req.params.itemId }'`, { type: QueryTypes.DELETE } )
+        await Item.sequelize.query( `delete from myan_market.item where id = '${ req.params.itemId }'`, { type: QueryTypes.DELETE } )
         res.status( 200 ).json( {
             "status": "Success"
         } )
@@ -118,7 +118,7 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
             'status', ItemPrice.status,
             'time', TO_CHAR(ItemPrice.created_datetime, 'HH24:MI:SS')
     ))) as "priceHistory"
-        FROM item_price ItemPrice
+        FROM myan_market.item_price ItemPrice
         left join item Item on Item.id = ItemPrice.item_id 
         WHERE Item.id = '${ itemId.trim() }'
         AND ItemPrice.location_id = '${ locationId.trim() }'
@@ -144,13 +144,13 @@ exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
 {
     const marketId = req.params.marketId
     const query = `SELECT DISTINCT ON (item.id) item.id,item.name, item.unit,itemPrice.location_id as "locationId", itemPrice.buy_price AS "buyPrice", itemPrice.sell_price AS "sellPrice", itemPrice.status, itemPrice.created_datetime AS "createdDatetime",itemPrice.modified_datetime AS "modifiedDatetime"
-            FROM item 
+            FROM myan_market.item 
             JOIN (
                 SELECT itemPrice.item_id,itemPrice.location_id, itemPrice.buy_price, itemPrice.sell_price, itemPrice.status,itemPrice.created_datetime,itemPrice.modified_datetime
-                FROM item_price itemPrice
+                FROM myan_market.item_price itemPrice
                 WHERE itemPrice.created_datetime = (
                     SELECT MAX(innerItemPrice.created_datetime)
-                    FROM item_price innerItemPrice
+                    FROM myan_market.item_price innerItemPrice
                     WHERE innerItemPrice.item_id = itemPrice.item_id
                     limit 1
                 )
@@ -171,13 +171,10 @@ exports.listOfAllItemWithLatestPrice = async ( req, res, next ) =>
 
 exports.listOfAll = async ( req, res, next ) =>
 {
-	const query = `SELECT * FROM item ORDER BY name ASC;`;
+	
 	try
 	{
-		const result = await Item.sequelize
-			.query( query, {
-				type: QueryTypes.SELECT
-			} );		
+		const result = await Item.findAll()		
 		res.status( 200 ).json( result );
 	} catch ( error )
 	{

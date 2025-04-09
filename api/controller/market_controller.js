@@ -77,7 +77,7 @@ exports.deleteMarket = async ( req, res, next ) =>
 {
     try
     {
-        await Market.sequelize.query( `delete from market where id = '${ req.params.marketId }'`, { type: QueryTypes.DELETE } )
+        await Market.sequelize.query( `delete from myan_market.market where id = '${ req.params.marketId }'`, { type: QueryTypes.DELETE } )
         res.status( 200 ).json( {
             "status": "Success"
         } )
