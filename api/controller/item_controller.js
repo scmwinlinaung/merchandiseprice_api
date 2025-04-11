@@ -116,10 +116,10 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
             'buyPriceChanges', ItemPrice.buy_price_changes,
             'sellPriceChanges', ItemPrice.sell_price_changes,
             'status', ItemPrice.status,
-            'time', TO_CHAR(ItemPrice.created_datetime, 'HH24:MI:SS')
+            'time', ItemPrice.created_datetime
     ))) as "priceHistory"
         FROM myan_market.item_price ItemPrice
-        left join item Item on Item.id = ItemPrice.item_id 
+        left join myan_market.item Item on Item.id = ItemPrice.item_id 
         WHERE Item.id = '${ itemId.trim() }'
         AND ItemPrice.location_id = '${ locationId.trim() }'
         AND ItemPrice.created_datetime BETWEEN '${ startDate }' AND '${ endDate }'
