@@ -150,6 +150,7 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
       itemPrice.buy_price AS "buyPrice", 
       itemPrice.sell_price AS "sellPrice", 
       itemPrice.status, 
+	  market.name as "marketName",
       itemPrice.created_datetime AS "createdDatetime",
       itemPrice.modified_datetime AS "modifiedDatetime"
     FROM myan_market.item 
@@ -163,7 +164,9 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
         WHERE innerItemPrice.item_id = itemPrice.item_id
         LIMIT 1
       )
-    ) itemPrice ON itemPrice.item_id = item.id
+    ) 
+	itemPrice ON itemPrice.item_id = item.id
+	left join myan_market.market Market on market.id = Item.market_id 
   `;
 
   const replacements = {};
