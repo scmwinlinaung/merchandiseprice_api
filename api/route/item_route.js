@@ -363,7 +363,7 @@ router.route('/itemName/:marketId').get(itemController.listOfItemName);
  *       500:
  *         description: Internal server error
  */
-router.route('/allItemWithLatestPrice/:marketId').get(itemController.listOfAllItemWithLatestPrice);
+router.route('/allItemWithLatestPrice').get(itemController.listOfAllItemWithLatestPrice);
 
 /**
  * @swagger
@@ -399,6 +399,6 @@ router.route('/allItemWithLatestPrice/:marketId').get(itemController.listOfAllIt
  *       500:
  *         description: Internal server error
  */
-router.route('/items').get(itemController.listOfAll);
+router.route('/item').get(itemController.listOfAll);
 
 module.exports = router;

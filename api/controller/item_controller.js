@@ -142,7 +142,7 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
 
 
 exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
-  const marketId = req.params.marketId?.trim();
+  const {marketId, locationId} = req.query
 
   let query = `
     SELECT DISTINCT ON (item.id) item.id, item.name, item.unit, 
@@ -174,6 +174,10 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
   if (marketId?.trim().length > 2) {
     query += ` WHERE item.market_id = :marketId`;
     replacements.marketId = marketId;
+  }
+  if(locationId?.trim().length > 2) {
+	query += ` AND itemPrice.location_id = :locationId`;
+	replacements.locationId = locationId;
   }
 
   try {
