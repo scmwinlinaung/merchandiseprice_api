@@ -1,5 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const logger = require('./api/util/logger');  // Import the logger
+
 const { connectDB, sequelize } = require("./api/util/database"); // Updated database utility
 const marketRoute = require("./api/route/market_route");
 const locationRoute = require("./api/route/location_route");
@@ -18,6 +20,7 @@ const { STATE_CONSTANT } = require("./api/constant/location_constant");
 // Swagger dependencies
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./swagger'); // Import the Swagger configuration
+const {connectRedis, terminateRedis}=require("./api/util/redis_client");
 
 const app = express();
 const port = 7000;
@@ -28,6 +31,7 @@ async function main() {
   try {
     // Initialize database connection and ensure it exists
     await connectDB();
+    //await connectRedis(); // Connect to Redis server
 
     // Create default markets, items, and locations
     await createDefaultMarketAndItems();
@@ -37,30 +41,30 @@ async function main() {
     app.use(express.json());
 
     // JWT middleware
-	app.use(async (req, res, next) => {
-		const generateTokenRouteName = "/api/v1/generateToken";
-		const swaggerApiRoutePrefix = "/api-docs";
-	  
-		if (
-		  req.originalUrl !== generateTokenRouteName &&
-		  !req.originalUrl.startsWith(swaggerApiRoutePrefix)
-		) {
-		  const tokenHeaderKey = process.env.TOKEN_HEADER_KEY || 'authorization';
-		  const headerKey = tokenHeaderKey.toLowerCase(); // All headers in req.headers are lowercase
-		  const token = req.headers[headerKey];
-	
-		  const tokenStatus = await validateToken(token);
-		  console.log("Token Status: ", tokenStatus);
-		  if (!tokenStatus) {
-			return res.status(401).send("Unauthorized Exception");
-		  }
-		}
-		next();
-	  });
-	  
+    app.use(async (req, res, next) => {
+      const generateTokenRouteName = "/api/v1/generateToken";
+      const swaggerApiRoutePrefix = "/api-docs";
+    
+      if (
+        req.originalUrl !== generateTokenRouteName &&
+        !req.originalUrl.startsWith(swaggerApiRoutePrefix)
+      ) {
+        const tokenHeaderKey = process.env.TOKEN_HEADER_KEY || 'authorization';
+        const headerKey = tokenHeaderKey.toLowerCase(); // All headers in req.headers are lowercase
+        const token = req.headers[headerKey];
+  
+        const tokenStatus = await validateToken(token);
+        logger.info("Token Status: ", tokenStatus); // Using logger
+        if (!tokenStatus) {
+          return res.status(401).send("Unauthorized Exception");
+        }
+      }
+      next();
+    });
+    
     // Routes
-	   // Serve Swagger UI at /api-docs
-	app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+    // Serve Swagger UI at /api-docs
+    app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
     app.use("/api/v1/", marketRoute);
     app.use("/api/v1/", locationRoute);
@@ -70,19 +74,21 @@ async function main() {
 
     // Start the server
     app.listen(port, '0.0.0.0', () => {
-      console.log(`Server is running on http://localhost:${port}`);
-      console.log(`Swagger UI is available at http://localhost:${port}/api-docs`);
+      logger.info(`Server is running on http://localhost:${port}`);  // Replaced console.log with logger
+      logger.info(`Swagger UI is available at http://localhost:${port}/api-docs`);
     });
 
     // Handle process termination
     process.on("SIGTERM", async () => {
-      console.log("SIGTERM received, closing database connection...");
+      logger.info("SIGTERM received, closing database connection..."); // Replaced console.log
       await sequelize.close();
-      console.log("Database connection closed.");
+      logger.info("Database connection closed.");
+      await terminateRedis(); // Close Redis connection
+      logger.info("Redis connection closed.");
       process.exit(0);
     });
   } catch (error) {
-    console.error("Failed to start the server:", error);
+    logger.error("Failed to start the server:", error);  // Replaced console.log with logger
     process.exit(1); // Exit with failure code
   }
 }
@@ -117,9 +123,9 @@ async function createDefaultMarketAndItems() {
         await Item.create(item);
       }
     }
-    console.log("Default markets and items created successfully.");
+    logger.info("Default markets and items created successfully."); // Replaced console.log
   } else {
-    console.log("Default markets or items already exist, skipping creation.");
+    logger.info("Default markets or items already exist, skipping creation."); // Replaced console.log
   }
 }
 
@@ -138,9 +144,9 @@ async function createLocation() {
       };
       await Location.create(location);
     }
-    console.log("Default locations created successfully.");
+    logger.info("Default locations created successfully."); // Replaced console.log
   } else {
-    console.log("Default locations already exist, skipping creation.");
+    logger.info("Default locations already exist, skipping creation."); // Replaced console.log
   }
 }
 

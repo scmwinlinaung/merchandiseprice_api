@@ -4,9 +4,9 @@ const GOLD_CONSTANT = [ 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 15', 'MYANMAR GO
 const VEGETABLE_CONSTANT = [ 'CONE', 'PALM OIL' ];
 const ITEM_PRICE_STATUS = [ "UP", "DOWN", "UNCHANGE" ];
 const CURRENCY_UNIT = [ '$', '€', 'S$', '฿', '¥', 'RM', 'CN¥', '₩', '£', 'AU$', 'Can$', 'NT$', 'د.إ', '₹', 'HK$', 'MOP$' ]
-const OIL_UNIT = [ '1 litre' ]
-const GOLD_UNIT = [ '1 oz', '15 pae ye', '16 pae ye' ];
-const VEGETABLE_UNIT = [ '1 kg' ];
+const OIL_UNIT = [ 'litre' ]
+const GOLD_UNIT = [ 'oz', '15 pae ye', '16 pae ye' ];
+const VEGETABLE_UNIT = [ 'kg' ];
 module.exports = {
     CURRENCY_CONSTANT,
     OIL_CONSTANT,
