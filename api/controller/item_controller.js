@@ -1,6 +1,25 @@
 const { QueryTypes } = require( 'sequelize' );
 const Item = require( '../model/item' );
 const { v4: uuidv4 } = require( 'uuid' );
+const logger = require('../util/logger');  // Import the logger
+
+
+exports.listOfItemByMarketId = async (req, res) => {
+	logger.info("listOfItemByMarketId")
+	const marketId = req.params.marketId;
+	if (!marketId) {
+	  return res.status(400).json({ message: 'Market ID is required' });
+	}
+  
+	try {
+	  const items = await Item.findAll({ where: { market_id: marketId } });
+	  res.status(200).json(items);
+	} catch (err) {
+	  console.error(err);
+	  res.status(500).json({ message: 'Server error' });
+	}
+  };
+  
 exports.listOfItemName = async ( req, res, next ) =>
 {
     try

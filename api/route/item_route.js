@@ -400,5 +400,5 @@ router.route('/allItemWithLatestPrice').get(itemController.listOfAllItemWithLate
  *         description: Internal server error
  */
 router.route('/item').get(itemController.listOfAll);
-
+router.route('/itemByMarketId/:marketId').get(itemController.listOfItemByMarketId);
 module.exports = router;
