@@ -129,23 +129,33 @@ exports.summaryOfAItemPrice = async ( req, res, next ) =>
         console.log( locationId );
         console.log( startDate );
         console.log( endDate )
-        const query = `SELECT Item.name,Item.unit,TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD') as date,(json_agg(json_build_object(
+        const query = `SELECT 
+    Item.name,
+    Item.unit,
+    TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD') AS date,
+    json_agg(
+        json_build_object(
             'buyPrice', ItemPrice.buy_price,
             'sellPrice', ItemPrice.sell_price,
             'buyPriceChanges', ItemPrice.buy_price_changes,
             'sellPriceChanges', ItemPrice.sell_price_changes,
             'status', ItemPrice.status,
             'time', ItemPrice.created_datetime
-    ))) as "priceHistory"
-        FROM myan_market.item_price ItemPrice
-        left join myan_market.item Item on Item.id = ItemPrice.item_id 
-        WHERE Item.id = '${ itemId.trim() }'
-        AND ItemPrice.location_id = '${ locationId.trim() }'
-        AND ItemPrice.created_datetime BETWEEN '${ startDate }' AND '${ endDate }'
-        GROUP BY 
-            Item.name,
-            Item.unit,
-            TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD')
+        ) ORDER BY ItemPrice.created_datetime DESC
+    ) AS "priceHistory"
+FROM myan_market.item_price ItemPrice
+LEFT JOIN myan_market.item Item ON Item.id = ItemPrice.item_id 
+WHERE 
+    Item.id = '${itemId.trim()}'
+    AND ItemPrice.location_id = '${locationId.trim()}'
+    AND ItemPrice.created_datetime BETWEEN '${startDate}' AND '${endDate}'
+GROUP BY 
+    Item.name,
+    Item.unit,
+    TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD')
+ORDER BY 
+    TO_CHAR(ItemPrice.created_datetime, 'YYYY-MM-DD') DESC;
+
       ;`
 
         const result = await Item.sequelize.query( query, {
