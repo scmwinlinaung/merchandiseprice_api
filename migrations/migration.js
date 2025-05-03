@@ -7,9 +7,9 @@ module.exports = {
 
     // Create ENUM types
     await queryInterface.sequelize.query(`
-      CREATE TYPE myan_market.item_unit AS ENUM ('$', '€', 'S$', '฿', '¥', 'RM', 'CN¥', '₩', '£', 'AU$', 'Can$', 'NT$', 'د.إ', '₹', 'HK$', 'MOP$', '1 litre', '1 oz', '15 pae ye', '16 pae ye', '1 kg');
+      CREATE TYPE myan_market.item_unit AS ENUM ('$', '€', 'S$', '฿', '¥', 'RM', 'CN¥', '₩', '£', 'AU$', 'Can$', 'NT$', 'د.إ', '₹', 'HK$', 'MOP$', 'litre', 'oz', '15 pae ye', '16 pae ye', 'kg');
       CREATE TYPE myan_market.status AS ENUM ('UP', 'DOWN', 'UNCHANGE');
-      CREATE TYPE myan_market.item_name AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'WON', 'GBP', 'AUD', 'CAD', 'NTD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL', 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 16', 'MYANMAR GOLD PRICE 15', 'CONE', 'PALM OIL');
+      CREATE TYPE myan_market.item_name AS ENUM ('USD', 'EUR', 'SGD', 'THB', 'JPY', 'MYR', 'CNY', 'KRW', 'GBP', 'AUD', 'CAD', 'TWD', 'AED', 'INR', 'HKD', 'MOP', '92 RON OCTANE', '95 RON OCTANE', '97 RON OCTANE', 'DISEAL', 'PREMIUM DISEAL', 'WORLD GOLD PRICE', 'MYANMAR GOLD PRICE 16', 'MYANMAR GOLD PRICE 15', 'CONE', 'PALM OIL');
       CREATE TYPE myan_market.state AS ENUM ('YANGON', 'MANDALAY', 'NAYPYITAW', 'AYARWADDY', 'BAGO', 'MAGWAY', 'SAGAING', 'TANINTHARYI', 'CHIN', 'KACHIN', 'KAYAH', 'KAYIN', 'MON', 'RAKHINE', 'SHAN');
     `);
 

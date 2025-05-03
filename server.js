@@ -20,10 +20,8 @@ const { STATE_CONSTANT } = require("./api/constant/location_constant");
 // Swagger dependencies
 const swaggerUi = require('swagger-ui-express');
 const swaggerSpec = require('./swagger'); // Import the Swagger configuration
-const {connectRedis, terminateRedis}=require("./api/util/redis_client");
-
 const app = express();
-const port = 7000;
+const port = process.env.PORT || 7000;
 
 async function main() {
   dotenv.config();
@@ -83,8 +81,6 @@ async function main() {
       logger.info("SIGTERM received, closing database connection..."); // Replaced console.log
       await sequelize.close();
       logger.info("Database connection closed.");
-      await terminateRedis(); // Close Redis connection
-      logger.info("Redis connection closed.");
       process.exit(0);
     });
   } catch (error) {

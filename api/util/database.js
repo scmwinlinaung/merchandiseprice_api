@@ -7,46 +7,51 @@ const {
   DATABASE_HOST,
 } = require('../constant/database_constant');
 
-// Initialize Sequelize instance
+// Initialize Sequelize instance for the specific database (myan_market)
 const sequelize = new Sequelize(DATABASE_NAME, DATABASE_USERNAME, DATABASE_PASSWORD, {
   host: DATABASE_HOST,
   dialect: 'postgres',
   port: DATABASE_PORT,
-  // Optional: Uncomment if SSL is needed
-  // dialectOptions: {
-  //   ssl: {
-  //     require: false,
-  //     rejectUnauthorized: false,
-  //   },
-  // },
-  logging: console.log, // Optional: Enable for debugging
+  dialectOptions: {
+    ssl: {
+      require: true,  // Enforce SSL as required by the server
+      rejectUnauthorized: false,  // Allow self-signed certificates (common for cloud providers)
+    },
+  },
+  logging: false,  // Disable logging in production (set to console.log for debugging)
 });
 
 // Function to connect and create database if it doesn’t exist
 const connectDB = async () => {
+  // Use a root Sequelize instance to connect to the PostgreSQL server (using the default 'postgres' database)
   const rootSequelize = new Sequelize({
+    database: 'postgres',  // Connect to the default 'postgres' database first
     dialect: 'postgres',
     host: DATABASE_HOST,
     port: DATABASE_PORT,
     username: DATABASE_USERNAME,
     password: DATABASE_PASSWORD,
-    // Optional: Uncomment if SSL is needed
-    // dialectOptions: {
-    //   ssl: {
-    //     require: false,
-    //     rejectUnauthorized: false,
-    //   },
-    // },
+    dialectOptions: {
+      ssl: {
+        require: true,  // Enforce SSL
+        rejectUnauthorized: false,  // Allow self-signed certificates
+      },
+    },
+    logging: false,  // Disable logging
   });
 
   try {
-    // Connect to PostgreSQL server (no specific database yet)
+    // Connect to PostgreSQL server (using the default 'postgres' database)
     await rootSequelize.authenticate();
     console.log('Connected to PostgreSQL server successfully.');
 
     // Check if the database exists
     const [results] = await rootSequelize.query(
-      `SELECT datname FROM pg_database WHERE datname = '${DATABASE_NAME}'`
+      `SELECT datname FROM pg_database WHERE datname = :dbName`,
+      {
+        replacements: { dbName: DATABASE_NAME },
+        type: Sequelize.QueryTypes.SELECT,
+      }
     );
 
     if (results.length === 0) {
@@ -57,7 +62,7 @@ const connectDB = async () => {
       console.log(`Database ${DATABASE_NAME} already exists.`);
     }
 
-    // Authenticate with the specific database
+    // Authenticate with the specific database (myan_market)
     await sequelize.authenticate();
     console.log(`Connection to ${DATABASE_NAME} established successfully.`);
 
@@ -69,6 +74,7 @@ const connectDB = async () => {
   } finally {
     // Close the root connection (not the main sequelize instance)
     await rootSequelize.close();
+    console.log('Root connection closed.');
   }
 };
 
