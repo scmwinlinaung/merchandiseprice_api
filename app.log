@@ -3,3 +3,385 @@ info: Default markets and items created successfully. {"timestamp":"2025-05-03T1
 info: Default locations created successfully. {"timestamp":"2025-05-03T16:34:57.528Z"}
 info: Server is running on http://localhost:7000 {"timestamp":"2025-05-03T16:34:57.537Z"}
 info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-03T16:34:57.537Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-04T09:15:06.348Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-04T09:15:06.402Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-04T09:15:06.416Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-04T09:15:06.417Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:16:21.769Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:16:28.324Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:16:28.566Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:16:28.798Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-04T09:16:28.800Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:16:43.506Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:17:13.449Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:17:17.648Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:17:17.764Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:17:18.000Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-04T09:17:18.001Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:17:33.393Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:17:53.859Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:18:09.139Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:18:21.712Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:18:40.570Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:18:59.328Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:19:20.131Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:19:39.586Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:20:05.928Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:20:22.359Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:20:38.168Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:20:59.266Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:21:18.921Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:21:33.461Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:22:19.787Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:22:26.493Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:22:30.231Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:29:58.423Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:30:06.464Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:30:06.623Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:30:06.791Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-04T09:30:06.792Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:30:13.452Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-04T09:30:13.453Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:31:05.762Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:31:28.375Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:31:32.571Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:31:36.687Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:31:36.838Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:31:37.001Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-04T09:31:37.001Z"}
+info: Token Status:  {"timestamp":"2025-05-04T09:31:38.734Z"}
+info: Token Status:  {"timestamp":"2025-05-04T10:51:58.240Z"}
+info: Token Status:  {"timestamp":"2025-05-04T10:52:05.493Z"}
+info: Token Status:  {"timestamp":"2025-05-04T10:52:26.291Z"}
+info: Token Status:  {"timestamp":"2025-05-04T16:59:49.624Z"}
+info: Token Status:  {"timestamp":"2025-05-04T16:59:52.434Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-05T07:23:22.546Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-05T07:23:22.626Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-05T07:23:22.639Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-05T07:23:22.641Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-05T07:24:22.911Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-05T07:24:22.993Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-05T07:30:23.637Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-05T07:30:23.711Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-05T07:30:23.716Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-05T07:30:23.716Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:31:01.431Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:31:01.592Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:31:06.790Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:26.710Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:32.286Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:34.655Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:37.626Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:37.868Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:38.129Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:39:38.130Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:40.335Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:42.113Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:42.323Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:42.579Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:39:42.580Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:45.560Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:39:45.561Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:39:50.430Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:42:09.260Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-05T07:43:09.519Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-05T07:43:09.599Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-05T07:43:09.605Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-05T07:43:09.605Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-05T07:43:09.940Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-05T07:43:10.020Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:43:10.861Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:43:12.291Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-05T07:43:50.763Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-05T07:43:50.852Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-05T07:43:50.858Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-05T07:43:50.861Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:43:52.461Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-05T07:43:53.800Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-05T07:43:53.883Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:44:07.648Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:44:09.118Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:44:09.660Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:44:09.663Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:44:12.474Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:44:12.475Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:45:27.418Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:45:29.076Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:45:29.304Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:45:29.305Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:45:50.289Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:46:15.180Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:46:42.316Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:47:11.680Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:47:50.735Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:48:27.518Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:49:02.848Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:49:17.639Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:49:17.827Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:49:18.144Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:49:18.145Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:49:46.874Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:50:56.973Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:51:24.323Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:08.155Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:13.405Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:13.594Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:13.856Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:53:13.857Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:30.523Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:34.831Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:36.642Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:42.064Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:42.548Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:53:42.749Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:53:42.749Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:54:17.894Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:55:00.003Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:55:33.271Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:56:11.002Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:56:44.552Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:56:53.400Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:56:53.600Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:56:53.833Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:56:53.834Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:57:18.665Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:58:56.823Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:59:04.624Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:59:04.898Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:59:05.187Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:59:05.188Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:59:28.787Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:59:35.915Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:59:36.220Z"}
+info: Token Status:  {"timestamp":"2025-05-05T07:59:36.435Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-05T07:59:36.436Z"}
+info: Token Status:  {"timestamp":"2025-05-05T08:00:04.190Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-10T04:15:25.350Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-10T04:15:25.544Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-10T04:15:25.567Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-10T04:15:25.568Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:16:22.876Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:16:25.769Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:16:26.224Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:16:26.718Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-10T04:16:26.719Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:16:41.005Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:17:18.908Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:17:49.445Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:18:20.965Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:19:18.718Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:19:46.572Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:19:51.946Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:19:57.536Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:05.614Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:14.865Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:17.909Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:32.818Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:35.117Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:35.720Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-10T04:20:35.720Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:44.732Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:48.024Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:52.525Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:52.927Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:20:53.339Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-10T04:20:53.339Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:21:23.142Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:21:58.673Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:22:30.789Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:23:04.754Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:23:49.064Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:23:57.554Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:23:58.000Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:23:58.481Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-10T04:23:58.482Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:24:21.524Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:24:56.246Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:25:48.867Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:26:18.897Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:26:43.947Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:26:49.806Z"}
+info: Token Status:  {"timestamp":"2025-05-10T04:26:51.249Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:20:29.554Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:20:29.610Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:20:29.619Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:20:29.620Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:21:04.505Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:21:04.544Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:21:04.552Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:21:04.553Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:22:29.586Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:22:29.625Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:22:29.631Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:22:29.631Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:26:18.242Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:26:18.277Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:26:18.281Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:26:18.282Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:26:23.785Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:26:23.823Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:26:23.828Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:26:23.828Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:32:16.962Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:32:21.753Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:32:21.910Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:32:22.138Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-12T03:32:22.140Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:35:08.823Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:35:08.867Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:35:08.874Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:35:08.874Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:35:23.023Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:35:23.084Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:35:23.088Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:35:23.088Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:39:35.115Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:39:35.156Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:39:35.161Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:39:35.162Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:41:48.910Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:41:50.787Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:41:50.933Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:42:54.448Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:42:56.437Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:42:56.530Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:42:56.633Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:44:22.937Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:44:22.978Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:44:22.984Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:44:22.985Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:44:26.008Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:44:26.145Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:44:26.265Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:44:31.834Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:44:32.040Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:44:32.263Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:45:05.278Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:45:09.470Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:45:09.718Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:45:09.942Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:46:02.345Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:46:02.386Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:46:02.391Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:46:02.392Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:46:08.417Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:46:08.518Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:46:08.641Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-12T03:46:08.642Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:47:07.892Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:47:07.946Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:47:07.953Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:47:07.954Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:47:08.746Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:47:08.873Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:47:08.980Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-12T03:47:08.981Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:47:41.747Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:47:49.004Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:47:49.261Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:47:49.505Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-12T03:47:49.505Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:48:37.420Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:48:38.248Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:50:28.884Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:50:29.588Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:51:30.602Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:51:30.638Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:51:30.643Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:51:30.644Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:52:01.967Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:52:02.009Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:52:02.012Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:52:02.013Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:52:13.331Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:52:14.256Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:52:14.378Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-12T03:52:14.379Z"}
+info: marketId {"timestamp":"2025-05-12T03:52:14.379Z"}
+info: locationId {"timestamp":"2025-05-12T03:52:14.380Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:52:47.894Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:52:47.931Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:52:47.938Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:52:47.941Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:53:37.983Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:53:38.844Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:53:39.173Z"}
+info: listOfItemByMarketId {"timestamp":"2025-05-12T03:53:39.175Z"}
+info: marketId {"timestamp":"2025-05-12T03:53:39.175Z"}
+info: locationId {"timestamp":"2025-05-12T03:53:39.177Z"}
+error: Error in listOfItemByMarketId: column latest_price.location_id does not exist {"name":"SequelizeDatabaseError","original":{"code":"42703","file":"parse_relation.c","length":122,"line":"3722","name":"error","position":"55","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \n\t\t\titem.id, \n\t\t\titem.name, \n\t\t\titem.unit, \n\t\t\tlatest_price.location_id AS locationId,\n\t\t\titem.market_id AS marketId, \n\t\t\tlatest_price.buy_price AS buyPrice, \n\t\t\tlatest_price.sell_price AS sellPrice\n\t\t\tFROM myan_market.item\n\t\t\tLEFT JOIN LATERAL (\n\t\t\tSELECT buy_price, sell_price\n\t\t\tFROM myan_market.item_price\n\t\t\tWHERE item_price.item_id = item.id\n\t\t\tORDER BY created_datetime DESC\n\t\t\tLIMIT 1\n\t\t\t) AS latest_price ON true\n\t\t\tWHERE \n\t\t\titem.market_id = '59465a06-5195-4f05-9794-369da740d1a2' and \n\t\t\tlatest_price.location_id = '27762f5b-dc04-4c69-924a-afb5c9274ace'\n\t\t\tORDER BY item.name ASC;"},"parameters":{},"parent":{"code":"42703","file":"parse_relation.c","length":122,"line":"3722","name":"error","position":"55","routine":"errorMissingColumn","severity":"ERROR","sql":"SELECT \n\t\t\titem.id, \n\t\t\titem.name, \n\t\t\titem.unit, \n\t\t\tlatest_price.location_id AS locationId,\n\t\t\titem.market_id AS marketId, \n\t\t\tlatest_price.buy_price AS buyPrice, \n\t\t\tlatest_price.sell_price AS sellPrice\n\t\t\tFROM myan_market.item\n\t\t\tLEFT JOIN LATERAL (\n\t\t\tSELECT buy_price, sell_price\n\t\t\tFROM myan_market.item_price\n\t\t\tWHERE item_price.item_id = item.id\n\t\t\tORDER BY created_datetime DESC\n\t\t\tLIMIT 1\n\t\t\t) AS latest_price ON true\n\t\t\tWHERE \n\t\t\titem.market_id = '59465a06-5195-4f05-9794-369da740d1a2' and \n\t\t\tlatest_price.location_id = '27762f5b-dc04-4c69-924a-afb5c9274ace'\n\t\t\tORDER BY item.name ASC;"},"sql":"SELECT \n\t\t\titem.id, \n\t\t\titem.name, \n\t\t\titem.unit, \n\t\t\tlatest_price.location_id AS locationId,\n\t\t\titem.market_id AS marketId, \n\t\t\tlatest_price.buy_price AS buyPrice, \n\t\t\tlatest_price.sell_price AS sellPrice\n\t\t\tFROM myan_market.item\n\t\t\tLEFT JOIN LATERAL (\n\t\t\tSELECT buy_price, sell_price\n\t\t\tFROM myan_market.item_price\n\t\t\tWHERE item_price.item_id = item.id\n\t\t\tORDER BY created_datetime DESC\n\t\t\tLIMIT 1\n\t\t\t) AS latest_price ON true\n\t\t\tWHERE \n\t\t\titem.market_id = '59465a06-5195-4f05-9794-369da740d1a2' and \n\t\t\tlatest_price.location_id = '27762f5b-dc04-4c69-924a-afb5c9274ace'\n\t\t\tORDER BY item.name ASC;","stack":"Error\n    at Query.run (F:\\MyProject\\merchandiseprice_api\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at F:\\MyProject\\merchandiseprice_api\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async exports.listOfItemByMarketId (F:\\MyProject\\merchandiseprice_api\\api\\controller\\item_controller.js:40:18)","timestamp":"2025-05-12T03:53:39.220Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:54:18.158Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:54:18.198Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:54:18.205Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:54:18.208Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:54:46.712Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:54:46.750Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:54:46.754Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:54:46.757Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:54:49.702Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:54:49.878Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:54:50.003Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:56:33.296Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:56:34.086Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:56:34.288Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:56:38.553Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:56:38.788Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:56:39.015Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:57:03.698Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:57:03.766Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:57:03.771Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:57:03.774Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:57:04.208Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:57:04.471Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:57:04.668Z"}
+info: Query executed successfully: {"timestamp":"2025-05-12T03:57:04.706Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T03:57:43.039Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T03:57:43.079Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T03:57:43.084Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T03:57:43.085Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:57:44.881Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:57:44.994Z"}
+info: Token Status:  {"timestamp":"2025-05-12T03:57:45.114Z"}
+info: Query executed successfully: {"0":[{"buyprice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellprice":4400,"unit":"$"},{"buyprice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellprice":4945,"unit":"€"},{"buyprice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellprice":3390,"unit":"S$"},{"buyprice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellprice":133,"unit":"฿"},{"buyprice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellprice":30.21,"unit":"¥"},{"buyprice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellprice":1025,"unit":"RM"},{"buyprice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellprice":607,"unit":"CN¥"},{"buyprice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellprice":3.15,"unit":"₩"},{"buyprice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellprice":5840,"unit":"£"},{"buyprice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellprice":2810,"unit":"AU$"},{"buyprice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellprice":3150,"unit":"Can$"},{"buyprice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellprice":145,"unit":"NT$"},{"buyprice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellprice":1196,"unit":"د.إ"},{"buyprice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellprice":51.41,"unit":"₹"},{"buyprice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellprice":565,"unit":"HK$"},{"buyprice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellprice":548,"unit":"MOP$"}],"1":{"RowCtor":null,"_parsers":[null,null,null,null,null,null,null],"_prebuiltEmptyResultObject":{"buyprice":null,"id":null,"locationid":null,"marketid":null,"name":null,"sellprice":null,"unit":null},"_types":{"_types":{},"binary":{},"text":{}},"command":"SELECT","fields":[{"columnID":1,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"id","tableID":16953},{"columnID":2,"dataTypeID":16850,"dataTypeModifier":-1,"dataTypeSize":4,"format":"text","name":"name","tableID":16953},{"columnID":4,"dataTypeID":16798,"dataTypeModifier":-1,"dataTypeSize":4,"format":"text","name":"unit","tableID":16953},{"columnID":8,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"locationid","tableID":16968},{"columnID":3,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"marketid","tableID":16953},{"columnID":3,"dataTypeID":701,"dataTypeModifier":-1,"dataTypeSize":8,"format":"text","name":"buyprice","tableID":16968},{"columnID":4,"dataTypeID":701,"dataTypeModifier":-1,"dataTypeSize":8,"format":"text","name":"sellprice","tableID":16968}],"oid":null,"rowAsArray":false,"rowCount":16,"rows":[{"buyprice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellprice":4400,"unit":"$"},{"buyprice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellprice":4945,"unit":"€"},{"buyprice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellprice":3390,"unit":"S$"},{"buyprice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellprice":133,"unit":"฿"},{"buyprice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellprice":30.21,"unit":"¥"},{"buyprice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellprice":1025,"unit":"RM"},{"buyprice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellprice":607,"unit":"CN¥"},{"buyprice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellprice":3.15,"unit":"₩"},{"buyprice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellprice":5840,"unit":"£"},{"buyprice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellprice":2810,"unit":"AU$"},{"buyprice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellprice":3150,"unit":"Can$"},{"buyprice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellprice":145,"unit":"NT$"},{"buyprice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellprice":1196,"unit":"د.إ"},{"buyprice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellprice":51.41,"unit":"₹"},{"buyprice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellprice":565,"unit":"HK$"},{"buyprice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationid":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketid":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellprice":548,"unit":"MOP$"}]},"timestamp":"2025-05-12T03:57:45.154Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T04:00:26.230Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T04:00:26.269Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T04:00:26.274Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T04:00:26.277Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:00:27.713Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:00:27.921Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:00:28.055Z"}
+info: Query executed successfully: {"0":[{"buyPrice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellPrice":4400,"unit":"$"},{"buyPrice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellPrice":4945,"unit":"€"},{"buyPrice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellPrice":3390,"unit":"S$"},{"buyPrice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellPrice":133,"unit":"฿"},{"buyPrice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellPrice":30.21,"unit":"¥"},{"buyPrice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellPrice":1025,"unit":"RM"},{"buyPrice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellPrice":607,"unit":"CN¥"},{"buyPrice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellPrice":3.15,"unit":"₩"},{"buyPrice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellPrice":5840,"unit":"£"},{"buyPrice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellPrice":2810,"unit":"AU$"},{"buyPrice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellPrice":3150,"unit":"Can$"},{"buyPrice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellPrice":145,"unit":"NT$"},{"buyPrice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellPrice":1196,"unit":"د.إ"},{"buyPrice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellPrice":51.41,"unit":"₹"},{"buyPrice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellPrice":565,"unit":"HK$"},{"buyPrice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellPrice":548,"unit":"MOP$"}],"1":{"RowCtor":null,"_parsers":[null,null,null,null,null,null,null],"_prebuiltEmptyResultObject":{"buyPrice":null,"id":null,"locationId":null,"marketId":null,"name":null,"sellPrice":null,"unit":null},"_types":{"_types":{},"binary":{},"text":{}},"command":"SELECT","fields":[{"columnID":1,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"id","tableID":16953},{"columnID":2,"dataTypeID":16850,"dataTypeModifier":-1,"dataTypeSize":4,"format":"text","name":"name","tableID":16953},{"columnID":4,"dataTypeID":16798,"dataTypeModifier":-1,"dataTypeSize":4,"format":"text","name":"unit","tableID":16953},{"columnID":8,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"locationId","tableID":16968},{"columnID":3,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"marketId","tableID":16953},{"columnID":3,"dataTypeID":701,"dataTypeModifier":-1,"dataTypeSize":8,"format":"text","name":"buyPrice","tableID":16968},{"columnID":4,"dataTypeID":701,"dataTypeModifier":-1,"dataTypeSize":8,"format":"text","name":"sellPrice","tableID":16968}],"oid":null,"rowAsArray":false,"rowCount":16,"rows":[{"buyPrice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellPrice":4400,"unit":"$"},{"buyPrice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellPrice":4945,"unit":"€"},{"buyPrice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellPrice":3390,"unit":"S$"},{"buyPrice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellPrice":133,"unit":"฿"},{"buyPrice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellPrice":30.21,"unit":"¥"},{"buyPrice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellPrice":1025,"unit":"RM"},{"buyPrice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellPrice":607,"unit":"CN¥"},{"buyPrice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellPrice":3.15,"unit":"₩"},{"buyPrice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellPrice":5840,"unit":"£"},{"buyPrice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellPrice":2810,"unit":"AU$"},{"buyPrice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellPrice":3150,"unit":"Can$"},{"buyPrice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellPrice":145,"unit":"NT$"},{"buyPrice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellPrice":1196,"unit":"د.إ"},{"buyPrice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellPrice":51.41,"unit":"₹"},{"buyPrice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellPrice":565,"unit":"HK$"},{"buyPrice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellPrice":548,"unit":"MOP$"}]},"timestamp":"2025-05-12T04:00:28.100Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:02:05.508Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:02:06.290Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:02:06.491Z"}
+info: Query executed successfully: {"0":[{"buyPrice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellPrice":4400,"unit":"$"},{"buyPrice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellPrice":4945,"unit":"€"},{"buyPrice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellPrice":3390,"unit":"S$"},{"buyPrice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellPrice":133,"unit":"฿"},{"buyPrice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellPrice":30.21,"unit":"¥"},{"buyPrice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellPrice":1025,"unit":"RM"},{"buyPrice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellPrice":607,"unit":"CN¥"},{"buyPrice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellPrice":3.15,"unit":"₩"},{"buyPrice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellPrice":5840,"unit":"£"},{"buyPrice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellPrice":2810,"unit":"AU$"},{"buyPrice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellPrice":3150,"unit":"Can$"},{"buyPrice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellPrice":145,"unit":"NT$"},{"buyPrice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellPrice":1196,"unit":"د.إ"},{"buyPrice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellPrice":51.41,"unit":"₹"},{"buyPrice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellPrice":565,"unit":"HK$"},{"buyPrice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellPrice":548,"unit":"MOP$"}],"1":{"RowCtor":null,"_parsers":[null,null,null,null,null,null,null],"_prebuiltEmptyResultObject":{"buyPrice":null,"id":null,"locationId":null,"marketId":null,"name":null,"sellPrice":null,"unit":null},"_types":{"_types":{},"binary":{},"text":{}},"command":"SELECT","fields":[{"columnID":1,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"id","tableID":16953},{"columnID":2,"dataTypeID":16850,"dataTypeModifier":-1,"dataTypeSize":4,"format":"text","name":"name","tableID":16953},{"columnID":4,"dataTypeID":16798,"dataTypeModifier":-1,"dataTypeSize":4,"format":"text","name":"unit","tableID":16953},{"columnID":8,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"locationId","tableID":16968},{"columnID":3,"dataTypeID":1043,"dataTypeModifier":259,"dataTypeSize":-1,"format":"text","name":"marketId","tableID":16953},{"columnID":3,"dataTypeID":701,"dataTypeModifier":-1,"dataTypeSize":8,"format":"text","name":"buyPrice","tableID":16968},{"columnID":4,"dataTypeID":701,"dataTypeModifier":-1,"dataTypeSize":8,"format":"text","name":"sellPrice","tableID":16968}],"oid":null,"rowAsArray":false,"rowCount":16,"rows":[{"buyPrice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellPrice":4400,"unit":"$"},{"buyPrice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellPrice":4945,"unit":"€"},{"buyPrice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellPrice":3390,"unit":"S$"},{"buyPrice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellPrice":133,"unit":"฿"},{"buyPrice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellPrice":30.21,"unit":"¥"},{"buyPrice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellPrice":1025,"unit":"RM"},{"buyPrice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellPrice":607,"unit":"CN¥"},{"buyPrice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellPrice":3.15,"unit":"₩"},{"buyPrice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellPrice":5840,"unit":"£"},{"buyPrice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellPrice":2810,"unit":"AU$"},{"buyPrice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellPrice":3150,"unit":"Can$"},{"buyPrice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellPrice":145,"unit":"NT$"},{"buyPrice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellPrice":1196,"unit":"د.إ"},{"buyPrice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellPrice":51.41,"unit":"₹"},{"buyPrice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellPrice":565,"unit":"HK$"},{"buyPrice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellPrice":548,"unit":"MOP$"}]},"timestamp":"2025-05-12T04:02:06.568Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:05:12.792Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T04:10:53.130Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T04:10:53.177Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T04:10:53.184Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T04:10:53.185Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:10:54.593Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:10:54.711Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:10:54.832Z"}
+info: Query executed successfully: {"0":{"buyPrice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellPrice":4400,"unit":"$"},"1":{"buyPrice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellPrice":4945,"unit":"€"},"10":{"buyPrice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellPrice":3150,"unit":"Can$"},"11":{"buyPrice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellPrice":145,"unit":"NT$"},"12":{"buyPrice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellPrice":1196,"unit":"د.إ"},"13":{"buyPrice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellPrice":51.41,"unit":"₹"},"14":{"buyPrice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellPrice":565,"unit":"HK$"},"15":{"buyPrice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellPrice":548,"unit":"MOP$"},"2":{"buyPrice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellPrice":3390,"unit":"S$"},"3":{"buyPrice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellPrice":133,"unit":"฿"},"4":{"buyPrice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellPrice":30.21,"unit":"¥"},"5":{"buyPrice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellPrice":1025,"unit":"RM"},"6":{"buyPrice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellPrice":607,"unit":"CN¥"},"7":{"buyPrice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellPrice":3.15,"unit":"₩"},"8":{"buyPrice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellPrice":5840,"unit":"£"},"9":{"buyPrice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellPrice":2810,"unit":"AU$"},"timestamp":"2025-05-12T04:10:54.872Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:11:27.711Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:11:28.643Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:11:28.856Z"}
+info: Query executed successfully: {"0":{"buyPrice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellPrice":4400,"unit":"$"},"1":{"buyPrice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellPrice":4945,"unit":"€"},"10":{"buyPrice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellPrice":3150,"unit":"Can$"},"11":{"buyPrice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellPrice":145,"unit":"NT$"},"12":{"buyPrice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellPrice":1196,"unit":"د.إ"},"13":{"buyPrice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellPrice":51.41,"unit":"₹"},"14":{"buyPrice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellPrice":565,"unit":"HK$"},"15":{"buyPrice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellPrice":548,"unit":"MOP$"},"2":{"buyPrice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellPrice":3390,"unit":"S$"},"3":{"buyPrice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellPrice":133,"unit":"฿"},"4":{"buyPrice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellPrice":30.21,"unit":"¥"},"5":{"buyPrice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellPrice":1025,"unit":"RM"},"6":{"buyPrice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellPrice":607,"unit":"CN¥"},"7":{"buyPrice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellPrice":3.15,"unit":"₩"},"8":{"buyPrice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellPrice":5840,"unit":"£"},"9":{"buyPrice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellPrice":2810,"unit":"AU$"},"timestamp":"2025-05-12T04:11:28.918Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:16:35.829Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:16:36.831Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:16:37.068Z"}
+info: Query executed successfully: {"0":{"buyPrice":4350,"id":"0b55321c-94d9-45e6-8972-3fc282319529","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"USD","sellPrice":4400,"unit":"$"},"1":{"buyPrice":4845,"id":"b5c6ca45-6e84-46fb-b6f8-02d5218fdd99","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"EUR","sellPrice":4945,"unit":"€"},"10":{"buyPrice":3090,"id":"7a9e287a-8c1e-4d57-abef-c1a2685fbd25","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CAD","sellPrice":3150,"unit":"Can$"},"11":{"buyPrice":142,"id":"8defeaf9-6a17-440d-968b-42bdb53ef9c1","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"TWD","sellPrice":145,"unit":"NT$"},"12":{"buyPrice":1172,"id":"635376f9-6494-4fea-961a-2d9e7a1fa5cd","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AED","sellPrice":1196,"unit":"د.إ"},"13":{"buyPrice":50.41,"id":"b4be0769-9c5a-44b8-bbe0-0dec1ecd4408","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"INR","sellPrice":51.41,"unit":"₹"},"14":{"buyPrice":554,"id":"58b218de-443b-4acc-bd2f-2f89d7c14553","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"HKD","sellPrice":565,"unit":"HK$"},"15":{"buyPrice":537,"id":"fcd29135-acdf-4b71-aa68-c37d8b1a6e61","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MOP","sellPrice":548,"unit":"MOP$"},"2":{"buyPrice":3340,"id":"1be634ef-a7b5-4d4e-afc3-cbe03faf9104","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"SGD","sellPrice":3390,"unit":"S$"},"3":{"buyPrice":130,"id":"9f68ae1a-2afd-4ffd-a980-a3c94e809bc5","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"THB","sellPrice":133,"unit":"฿"},"4":{"buyPrice":29.62,"id":"82ce6317-6529-45b5-9cda-61da51bb1b8e","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"JPY","sellPrice":30.21,"unit":"¥"},"5":{"buyPrice":1010,"id":"94c30c8d-cdae-4a77-8e6f-811a5b700d5b","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"MYR","sellPrice":1025,"unit":"RM"},"6":{"buyPrice":595,"id":"779674a4-7bea-4155-a5f1-1eba16a12184","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"CNY","sellPrice":607,"unit":"CN¥"},"7":{"buyPrice":3.08,"id":"04fb8b48-1e48-427b-8785-10096147ea1f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"KRW","sellPrice":3.15,"unit":"₩"},"8":{"buyPrice":5725,"id":"827c019c-fdb1-4bfd-856e-9d92c352ca3c","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"GBP","sellPrice":5840,"unit":"£"},"9":{"buyPrice":2760,"id":"44d912a3-0315-4c2d-a842-bc4cad7c8f9f","locationId":"27762f5b-dc04-4c69-924a-afb5c9274ace","marketId":"59465a06-5195-4f05-9794-369da740d1a2","name":"AUD","sellPrice":2810,"unit":"AU$"},"timestamp":"2025-05-12T04:16:37.110Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-12T04:17:00.638Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-12T04:17:00.679Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-12T04:17:00.684Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-12T04:17:00.685Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:18:04.684Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:18:05.834Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:18:06.155Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:20:54.491Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:20:55.508Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:20:55.829Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:23:21.585Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:23:22.466Z"}
+info: Token Status:  {"timestamp":"2025-05-12T04:23:22.725Z"}

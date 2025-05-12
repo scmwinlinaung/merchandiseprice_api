@@ -5,17 +5,39 @@ const logger = require('../util/logger');  // Import the logger
 
 
 exports.listOfItemByMarketId = async (req, res) => {
-	logger.info("listOfItemByMarketId")
-	const marketId = req.params.marketId;
+	const {marketId, locationId} = req.body;
 	if (!marketId) {
 	  return res.status(400).json({ message: 'Market ID is required' });
 	}
-  
+	if (!locationId) {
+		return res.status(400).json({ message: 'Location ID is required' });
+	}
 	try {
-	  const items = await Item.findAll({ where: { market_id: marketId } });
+	 const query = `SELECT 
+			item.id, 
+			item.name, 
+			item.unit, 
+			latest_price.location_id AS "locationId",
+			item.market_id AS "marketId", 
+			latest_price.buy_price AS "buyPrice", 
+			latest_price.sell_price AS "sellPrice"
+			FROM myan_market.item
+			LEFT JOIN LATERAL (
+			SELECT buy_price, sell_price, location_id
+			FROM myan_market.item_price
+			WHERE item_price.item_id = item.id
+			ORDER BY created_datetime DESC
+			LIMIT 1
+			) AS latest_price ON true
+			WHERE 
+			item.market_id = '${marketId.trim()}' and 
+			latest_price.location_id = '${locationId.trim()}'
+			ORDER BY item.name ASC;
+			`;
+	  const [items] = await Item.sequelize.query(query);
 	  res.status(200).json(items);
 	} catch (err) {
-	  console.error(err);
+	  logger.error("Error in listOfItemByMarketId:", err);
 	  res.status(500).json({ message: 'Server error' });
 	}
   };
@@ -35,25 +57,46 @@ exports.listOfItemName = async ( req, res, next ) =>
         res.status( 500 ).json( { error: err.message } );
     }
 }
-exports.createItem = async ( req, res, next ) =>
-{
 
-    try
-    {
-        const { name, marketId, unit } = req.body;
+exports.createItem = async (req, res, next) => {
+    const { name, marketId, unit } = req.body;
+
+    try {
+        // Add new name to ENUM if not exists
+        const nameEnumType = 'myan_market.item_name';
+        const unitEnumType = 'myan_market.item_unit';
+
+        // Check and add new name to ENUM
+        const [nameEnum] = await Item.sequelize.query(`SELECT unnest(enum_range(NULL::${nameEnumType}))`);
+        const nameExists = nameEnum.some(row => row.unnest === name);
+
+        if (!nameExists) {
+            await Item.sequelize.query(`ALTER TYPE ${nameEnumType} ADD VALUE IF NOT EXISTS '${name}'`);
+        }
+
+        // Check and add new unit to ENUM
+        const [unitEnum] = await Item.sequelize.query(`SELECT unnest(enum_range(NULL::${unitEnumType}))`);
+        const unitExists = unitEnum.some(row => row.unnest === unit);
+
+        if (!unitExists) {
+            await Item.sequelize.query(`ALTER TYPE ${unitEnumType} ADD VALUE IF NOT EXISTS '${unit}'`);
+        }
+
+        // Now create the item
         const item = {
             id: uuidv4(),
-            name: name,
-            marketId: marketId,
-            unit: unit,
-        }
-        const result = await Item.create( item );
-        res.status( 201 ).json( result );
-    } catch ( err )
-    {
-        res.status( 500 ).json( { error: err.message } );
+            name,
+            marketId,
+            unit,
+        };
+
+        const result = await Item.create(item);
+        res.status(201).json(result);
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ error: err.message });
     }
-}
+};
 
 exports.updateItem = async ( req, res, next ) =>
 {
