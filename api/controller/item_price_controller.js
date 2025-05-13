@@ -7,7 +7,7 @@ exports.createItemPrice = async ( req, res, next ) =>
 
     try
     {
-        const { locationId, itemId, buyPrice, sellPrice, buyPriceChanges, sellPriceChanges, status } = req.body;
+        const { locationId, itemId, buyPrice, sellPrice, buyPriceChanges, sellPriceChanges, status, createdDatetime, modifiedDatetime } = req.body;
         const itemPrice = {
             id: uuidv4(),
             locationId: locationId,
@@ -16,7 +16,7 @@ exports.createItemPrice = async ( req, res, next ) =>
             sellPrice: sellPrice,
             buyPriceChanges: buyPriceChanges,
             sellPriceChanges: sellPriceChanges,
-            status: status
+            status: status,
         }
         const result = await ItemPrice.create( itemPrice );
         res.status( 201 ).json( result );

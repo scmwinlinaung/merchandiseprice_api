@@ -385,3 +385,21 @@ info: Token Status:  {"timestamp":"2025-05-12T04:20:55.829Z"}
 info: Token Status:  {"timestamp":"2025-05-12T04:23:21.585Z"}
 info: Token Status:  {"timestamp":"2025-05-12T04:23:22.466Z"}
 info: Token Status:  {"timestamp":"2025-05-12T04:23:22.725Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-13T07:15:11.521Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-13T07:15:11.565Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-13T07:15:11.578Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-13T07:15:11.579Z"}
+info: Token Status:  {"timestamp":"2025-05-13T07:16:48.513Z"}
+info: Token Status:  {"timestamp":"2025-05-13T07:19:58.060Z"}
+info: Token Status:  {"timestamp":"2025-05-13T07:20:02.479Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-13T07:20:31.279Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-13T07:20:31.318Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-13T07:20:31.323Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-13T07:20:31.324Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-05-13T07:27:49.066Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-05-13T07:27:49.119Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-05-13T07:27:49.125Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-05-13T07:27:49.126Z"}
+info: Token Status:  {"timestamp":"2025-05-13T07:27:56.775Z"}
+info: Token Status:  {"timestamp":"2025-05-13T07:27:56.904Z"}
+info: Token Status:  {"timestamp":"2025-05-13T07:27:57.370Z"}

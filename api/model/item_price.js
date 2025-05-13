@@ -47,14 +47,14 @@ const ItemPrice = database.sequelize.define( "item_price", {
     createdDatetime: {
         type: DataTypes.DATE,
         allowNull: false,
-        defaultValue: new Date(),
+        defaultValue: Sequelize.fn("NOW"),
         field: "created_datetime"
 
     },
     modifiedDatetime: {
         type: DataTypes.DATE,
         allowNull: true,
-        defaultValue: new Date(),
+        defaultValue: Sequelize.fn("NOW"),
         field: "modified_datetime"
     }
 }, {
