@@ -34,10 +34,13 @@ exports.listOfItemByMarketId = async (req, res) => {
         AND latest_price.location_id = :locationId
       ORDER BY item.name ASC;
     `;
-    const [items] = await Item.sequelize.query(query, {
+    const items = await Item.sequelize.query(query, {
       replacements: { marketId: marketId.trim(), locationId: locationId.trim() },
       type: QueryTypes.SELECT,
     });
+	if (!items || items.length === 0) {
+	  return res.status(404).json({ message: 'No items found for the given market and location' });
+	}
     res.status(200).json(items);
   } catch (err) {
     logger.error("Error in listOfItemByMarketId:", err);

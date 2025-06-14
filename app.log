@@ -418,3 +418,61 @@ info: Token Status:  {"timestamp":"2025-06-13T09:54:30.666Z"}
 info: Token Status:  {"timestamp":"2025-06-13T09:54:32.759Z"}
 info: Token Status:  {"timestamp":"2025-06-13T09:54:35.957Z"}
 info: Token Status:  {"timestamp":"2025-06-13T09:54:39.934Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-13T10:49:11.619Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-13T10:49:11.678Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-13T10:49:11.690Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-13T10:49:11.692Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:18:16.748Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:18:16.817Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:18:16.825Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:18:16.826Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:19:18.732Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:26:24.387Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:26:24.460Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:26:24.506Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:26:24.511Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:26:27.847Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:26:52.939Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:26:52.996Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:26:53.002Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:26:53.003Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:27:25.125Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:27:25.182Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:27:25.187Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:27:25.187Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:27:34.324Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:27:45.562Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:28:04.572Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:28:04.639Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:28:04.646Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:28:04.647Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:28:42.259Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:28:42.319Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:28:42.336Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:28:42.337Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:28:44.384Z"}
+error: Error in listOfItemByMarketId: syntax error at or near "FROM" {"name":"SequelizeDatabaseError","original":{"code":"42601","file":"scan.l","length":94,"line":"1244","name":"error","position":"112","routine":"scanner_yyerror","severity":"ERROR","sql":"SELECT \n        item.id, \n        item.name, \n        item.unit, \n        item.market_id AS \"marketId\", \n      FROM myan_market.item"},"parameters":{},"parent":{"code":"42601","file":"scan.l","length":94,"line":"1244","name":"error","position":"112","routine":"scanner_yyerror","severity":"ERROR","sql":"SELECT \n        item.id, \n        item.name, \n        item.unit, \n        item.market_id AS \"marketId\", \n      FROM myan_market.item"},"sql":"SELECT \n        item.id, \n        item.name, \n        item.unit, \n        item.market_id AS \"marketId\", \n      FROM myan_market.item","stack":"Error\n    at Query.run (F:\\MyProject\\merchandiseprice_api\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at F:\\MyProject\\merchandiseprice_api\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async exports.listOfItemByMarketId (F:\\MyProject\\merchandiseprice_api\\api\\controller\\item_controller.js:24:21)","timestamp":"2025-06-14T16:28:44.442Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:29:07.755Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:29:07.813Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:29:07.820Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:29:07.821Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:29:10.050Z"}
+error: Error in listOfItemByMarketId: syntax error at or near "FROM" {"name":"SequelizeDatabaseError","original":{"code":"42601","file":"scan.l","length":94,"line":"1244","name":"error","position":"112","routine":"scanner_yyerror","severity":"ERROR","sql":"SELECT \n        item.id, \n        item.name, \n        item.unit, \n        item.market_id AS \"marketId\", \n      FROM myan_market.item"},"parameters":{},"parent":{"code":"42601","file":"scan.l","length":94,"line":"1244","name":"error","position":"112","routine":"scanner_yyerror","severity":"ERROR","sql":"SELECT \n        item.id, \n        item.name, \n        item.unit, \n        item.market_id AS \"marketId\", \n      FROM myan_market.item"},"sql":"SELECT \n        item.id, \n        item.name, \n        item.unit, \n        item.market_id AS \"marketId\", \n      FROM myan_market.item","stack":"Error\n    at Query.run (F:\\MyProject\\merchandiseprice_api\\node_modules\\sequelize\\lib\\dialects\\postgres\\query.js:50:25)\n    at F:\\MyProject\\merchandiseprice_api\\node_modules\\sequelize\\lib\\sequelize.js:315:28\n    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n    at async exports.listOfItemByMarketId (F:\\MyProject\\merchandiseprice_api\\api\\controller\\item_controller.js:24:21)","timestamp":"2025-06-14T16:29:10.125Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:29:34.302Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:29:34.366Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:29:34.374Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:29:34.375Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:29:55.869Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:29:55.927Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:29:55.933Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:29:55.934Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:30:01.969Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:31:42.335Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:31:42.390Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:31:42.395Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:31:42.401Z"}
+info: Token Status:  {"timestamp":"2025-06-14T16:31:45.180Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-06-14T16:32:18.491Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-06-14T16:32:18.547Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-06-14T16:32:18.553Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-06-14T16:32:18.553Z"}
