@@ -38,9 +38,9 @@ exports.listOfItemByMarketId = async (req, res) => {
       replacements: { marketId: marketId.trim(), locationId: locationId.trim() },
       type: QueryTypes.SELECT,
     });
-	if (!items || items.length === 0) {
-	  return res.status(404).json({ message: 'No items found for the given market and location' });
-	}
+    if (!items || items.length === 0) {
+      return res.status(404).json({ message: 'No items found for the given market and location' });
+    }
     res.status(200).json(items);
   } catch (err) {
     logger.error("Error in listOfItemByMarketId:", err);
@@ -205,17 +205,17 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
   const { marketId, locationId } = req.query;
 
   let query = `
-    SELECT DISTINCT ON (item.id) item.id, item.name, item.unit, 
-      itemPrice.location_id AS "locationId", 
-      itemPrice.buy_price AS "buyPrice", 
-      itemPrice.sell_price AS "sellPrice", 
-      itemPrice.status, 
-      market.name as "marketName",
+    SELECT DISTINCT ON (item.id) item.id, item.name, item.unit,
+      itemPrice.location_id AS "locationId",
+      COALESCE(itemPrice.buy_price, 0) AS "buyPrice",
+      COALESCE(itemPrice.sell_price, 0) AS "sellPrice",
+      COALESCE(itemPrice.status, '') AS status,
+      COALESCE(market.name, '') AS "marketName",
       itemPrice.created_datetime AS "createdDatetime",
       itemPrice.modified_datetime AS "modifiedDatetime"
-    FROM myan_market.item 
+    FROM myan_market.item
     JOIN (
-      SELECT itemPrice.item_id, itemPrice.location_id, itemPrice.buy_price, itemPrice.sell_price, 
+      SELECT itemPrice.item_id, itemPrice.location_id, itemPrice.buy_price, itemPrice.sell_price,
              itemPrice.status, itemPrice.created_datetime, itemPrice.modified_datetime
       FROM myan_market.item_price itemPrice
       WHERE itemPrice.created_datetime = (
@@ -224,20 +224,35 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
         WHERE innerItemPrice.item_id = itemPrice.item_id
         LIMIT 1
       )
-    ) 
+    )
     itemPrice ON itemPrice.item_id = item.id
-    LEFT JOIN myan_market.market Market ON market.id = item.market_id 
+    LEFT JOIN myan_market.market Market ON market.id = item.market_id
   `;
 
   const replacements = {};
+  const conditions = [];
 
-  if (marketId?.trim().length > 2) {
-    query += ` WHERE item.market_id = :marketId`;
-    replacements.marketId = marketId;
+  // Null-safe marketId validation
+  if (marketId && typeof marketId === 'string') {
+    const trimmedMarketId = marketId.trim();
+    if (trimmedMarketId.length > 0) {
+      conditions.push(`item.market_id = :marketId`);
+      replacements.marketId = trimmedMarketId;
+    }
   }
-  if (locationId?.trim().length > 2) {
-    query += ` AND itemPrice.location_id = :locationId`;
-    replacements.locationId = locationId;
+
+  // Null-safe locationId validation
+  if (locationId && typeof locationId === 'string') {
+    const trimmedLocationId = locationId.trim();
+    if (trimmedLocationId.length > 0) {
+      conditions.push(`itemPrice.location_id = :locationId`);
+      replacements.locationId = trimmedLocationId;
+    }
+  }
+
+  // Add WHERE clause if there are any conditions
+  if (conditions.length > 0) {
+    query += ` WHERE ${conditions.join(' AND ')}`;
   }
 
   try {
