@@ -1,0 +1,8 @@
+info: Default markets and items created successfully. {"timestamp":"2025-12-31T13:08:38.684Z"}
+info: Default locations created successfully. {"timestamp":"2025-12-31T13:08:40.686Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-12-31T13:08:40.692Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-12-31T13:08:40.693Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-12-31T13:09:40.468Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-12-31T13:09:40.518Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-12-31T13:09:40.522Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-12-31T13:09:40.523Z"}

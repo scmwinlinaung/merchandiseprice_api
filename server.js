@@ -42,7 +42,7 @@ async function main() {
     app.use(async (req, res, next) => {
       const generateTokenRouteName = "/api/v1/generateToken";
       const swaggerApiRoutePrefix = "/api-docs";
-    
+
       if (
         req.originalUrl !== generateTokenRouteName &&
         !req.originalUrl.startsWith(swaggerApiRoutePrefix)
@@ -50,7 +50,7 @@ async function main() {
         const tokenHeaderKey = process.env.TOKEN_HEADER_KEY || 'authorization';
         const headerKey = tokenHeaderKey.toLowerCase(); // All headers in req.headers are lowercase
         const token = req.headers[headerKey];
-  
+
         const tokenStatus = await validateToken(token);
         logger.info("Token Status: ", tokenStatus); // Using logger
         if (!tokenStatus) {
@@ -59,7 +59,7 @@ async function main() {
       }
       next();
     });
-    
+
     // Routes
     // Serve Swagger UI at /api-docs
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
@@ -90,59 +90,67 @@ async function main() {
 }
 
 async function createDefaultMarketAndItems() {
-  const marketCount = await Market.count();
-  const itemCount = await Item.count();
+  try {
+    const marketCount = await Market.count();
+    const itemCount = await Item.count();
 
-  if (marketCount === 0 && itemCount === 0) {
-    for (let i = 0; i < MARKETS_CONSTANT.length; i++) {
-      const marketId = uuidv4();
-      await Market.create({
-        id: marketId,
-        name: MARKETS_CONSTANT[i].name,
-        description: MARKETS_CONSTANT[i].description,
-        created_datetime: new Date(),
-        modified_datetime: new Date(),
-      });
-
-      const allItems = [CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT];
-      const allUnits = [CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT];
-
-      for (let j = 0; j < allItems[i].length; j++) {
-        const item = {
-          id: uuidv4(),
-          name: allItems[i][j],
-          marketId: marketId,
-          unit: allUnits[i][j] ?? allUnits[i][0], // Fallback to first unit if null
+    if (marketCount === 0 && itemCount === 0) {
+      for (let i = 0; i < MARKETS_CONSTANT.length; i++) {
+        const marketId = uuidv4();
+        await Market.create({
+          id: marketId,
+          name: MARKETS_CONSTANT[i].name,
+          description: MARKETS_CONSTANT[i].description,
           created_datetime: new Date(),
           modified_datetime: new Date(),
-        };
-        await Item.create(item);
+        });
+
+        const allItems = [CURRENCY_CONSTANT, OIL_CONSTANT, GOLD_CONSTANT, VEGETABLE_CONSTANT];
+        const allUnits = [CURRENCY_UNIT, OIL_UNIT, GOLD_UNIT, VEGETABLE_UNIT];
+
+        for (let j = 0; j < allItems[i].length; j++) {
+          const item = {
+            id: uuidv4(),
+            name: allItems[i][j],
+            marketId: marketId,
+            unit: allUnits[i][j] ?? allUnits[i][0], // Fallback to first unit if null
+            created_datetime: new Date(),
+            modified_datetime: new Date(),
+          };
+          await Item.create(item);
+        }
       }
+      logger.info("Default markets and items created successfully."); // Replaced console.log
+    } else {
+      logger.info("Default markets or items already exist, skipping creation."); // Replaced console.log
     }
-    logger.info("Default markets and items created successfully."); // Replaced console.log
-  } else {
-    logger.info("Default markets or items already exist, skipping creation."); // Replaced console.log
+  } catch (e) {
+    logger.error(e);
   }
 }
 
 async function createLocation() {
-  const locationCount = await Location.count();
-  if (locationCount === 0) {
-    for (let i = 0; i < STATE_CONSTANT.length; i++) {
-      const location = {
-        id: uuidv4(),
-        state: STATE_CONSTANT[i],
-        district: '',
-        subdistrict: '',
-        city: '',
-        created_datetime: new Date(),
-        modified_datetime: new Date(),
-      };
-      await Location.create(location);
+  try {
+    const locationCount = await Location.count();
+    if (locationCount === 0) {
+      for (let i = 0; i < STATE_CONSTANT.length; i++) {
+        const location = {
+          id: uuidv4(),
+          state: STATE_CONSTANT[i],
+          district: '',
+          subdistrict: '',
+          city: '',
+          created_datetime: new Date(),
+          modified_datetime: new Date(),
+        };
+        await Location.create(location);
+      }
+      logger.info("Default locations created successfully."); // Replaced console.log
+    } else {
+      logger.info("Default locations already exist, skipping creation."); // Replaced console.log
     }
-    logger.info("Default locations created successfully."); // Replaced console.log
-  } else {
-    logger.info("Default locations already exist, skipping creation."); // Replaced console.log
+  } catch (e) {
+    logger.error(e);
   }
 }
 
