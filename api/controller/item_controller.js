@@ -214,18 +214,14 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
       itemPrice.created_datetime AS "createdDatetime",
       itemPrice.modified_datetime AS "modifiedDatetime"
     FROM myan_market.item
-    JOIN (
-      SELECT itemPrice.item_id, itemPrice.location_id, itemPrice.buy_price, itemPrice.sell_price,
-             itemPrice.status, itemPrice.created_datetime, itemPrice.modified_datetime
-      FROM myan_market.item_price itemPrice
-      WHERE itemPrice.created_datetime = (
-        SELECT MAX(innerItemPrice.created_datetime)
-        FROM myan_market.item_price innerItemPrice
-        WHERE innerItemPrice.item_id = itemPrice.item_id
-        LIMIT 1
-      )
-    )
-    itemPrice ON itemPrice.item_id = item.id
+    LEFT JOIN LATERAL (
+      SELECT item_price.item_id, item_price.location_id, item_price.buy_price, item_price.sell_price,
+             item_price.status, item_price.created_datetime, item_price.modified_datetime
+      FROM myan_market.item_price
+      WHERE item_price.item_id = item.id
+      ORDER BY item_price.created_datetime DESC
+      LIMIT 1
+    ) itemPrice ON true
     LEFT JOIN myan_market.market Market ON market.id = item.market_id
   `;
 
