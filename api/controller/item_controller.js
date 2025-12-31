@@ -209,7 +209,7 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
       itemPrice.location_id AS "locationId",
       COALESCE(itemPrice.buy_price, 0) AS "buyPrice",
       COALESCE(itemPrice.sell_price, 0) AS "sellPrice",
-      COALESCE(itemPrice.status, '') AS status,
+      itemPrice.status AS status,
       COALESCE(market.name, '') AS "marketName",
       itemPrice.created_datetime AS "createdDatetime",
       itemPrice.modified_datetime AS "modifiedDatetime"
