@@ -6,3 +6,7 @@ info: Default markets or items already exist, skipping creation. {"timestamp":"2
 info: Default locations already exist, skipping creation. {"timestamp":"2025-12-31T13:09:40.518Z"}
 info: Server is running on http://localhost:7000 {"timestamp":"2025-12-31T13:09:40.522Z"}
 info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-12-31T13:09:40.523Z"}
+info: Default markets or items already exist, skipping creation. {"timestamp":"2025-12-31T13:34:53.010Z"}
+info: Default locations already exist, skipping creation. {"timestamp":"2025-12-31T13:34:53.068Z"}
+info: Server is running on http://localhost:7000 {"timestamp":"2025-12-31T13:34:53.075Z"}
+info: Swagger UI is available at http://localhost:7000/api-docs {"timestamp":"2025-12-31T13:34:53.075Z"}

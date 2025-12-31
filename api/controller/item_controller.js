@@ -13,27 +13,27 @@ exports.listOfItemByMarketId = async (req, res) => {
   }
   try {
     const query = `
-      SELECT 
-        item.id, 
-        item.name, 
-        item.unit, 
-        latest_price.location_id AS "locationId",
-        item.market_id AS "marketId", 
-        latest_price.buy_price AS "buyPrice", 
-        latest_price.sell_price AS "sellPrice"
-      FROM myan_market.item
-      LEFT JOIN LATERAL (
-        SELECT buy_price, sell_price, location_id
-        FROM myan_market.item_price
-        WHERE item_price.item_id = item.id
-        ORDER BY created_datetime DESC
-        LIMIT 1
-      ) AS latest_price ON true
-      WHERE 
-        item.market_id = :marketId 
-        AND latest_price.location_id = :locationId
-      ORDER BY item.name ASC;
-    `;
+    SELECT
+      item.id,
+      item.name,
+      item.unit,
+      latest_price.location_id AS "locationId",
+      item.market_id AS "marketId",
+      COALESCE(latest_price.buy_price, 0) AS "buyPrice",
+      COALESCE(latest_price.sell_price, 0) AS "sellPrice"
+    FROM myan_market.item
+    LEFT JOIN LATERAL (
+      SELECT buy_price, sell_price, location_id
+      FROM myan_market.item_price
+      WHERE item_price.item_id = item.id
+        AND item_price.location_id = :locationId
+      ORDER BY created_datetime DESC
+      LIMIT 1
+    ) AS latest_price ON true
+    WHERE
+      item.market_id = :marketId
+    ORDER BY item.name ASC;
+  `;
     const items = await Item.sequelize.query(query, {
       replacements: { marketId: marketId.trim(), locationId: locationId.trim() },
       type: QueryTypes.SELECT,
