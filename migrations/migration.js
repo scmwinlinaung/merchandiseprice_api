@@ -115,6 +115,9 @@ module.exports = {
         defaultValue: Sequelize.fn('NOW'),
       },
     }, { schema: 'myan_market' });
+    // Create index on item.name
+    await queryInterface.addIndex({ tableName: 'item_price', schema: 'myan_market' }, ['created_datetime'], { name: 'created_datetime' });
+
   },
 
   down: async (queryInterface) => {
