@@ -219,6 +219,7 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
              item_price.status, item_price.created_datetime, item_price.modified_datetime
       FROM myan_market.item_price
       WHERE item_price.item_id = item.id
+        ${locationId ? 'AND item_price.location_id = :locationId' : ''}
       ORDER BY item_price.created_datetime DESC
       LIMIT 1
     ) itemPrice ON true
@@ -237,11 +238,10 @@ exports.listOfAllItemWithLatestPrice = async (req, res, next) => {
     }
   }
 
-  // Null-safe locationId validation
+  // Null-safe locationId validation - now used inside the LEFT JOIN LATERAL
   if (locationId && typeof locationId === 'string') {
     const trimmedLocationId = locationId.trim();
     if (trimmedLocationId.length > 0) {
-      conditions.push(`itemPrice.location_id = :locationId`);
       replacements.locationId = trimmedLocationId;
     }
   }
